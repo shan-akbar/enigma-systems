@@ -1,77 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enigma Systems</title>
-
-  <!-- FAVICON (Replace href with your favicon link) -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
-    header { padding: 60px 20px; text-align: center; background: #020617; }
-    h1 { font-size: 3rem; margin: 10px 0 0 0; }
-    p { max-width: 700px; margin: 10px auto; }
-    section { padding: 60px 20px; text-align: center; }
-    .btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #3b82f6; color: white; text-decoration: none; border-radius: 8px; }
-    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .card { background: #020617; padding: 20px; border-radius: 10px; width: 250px; }
-    footer { padding: 20px; text-align: center; background: #020617; }
-    .logo {  height: auto; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Systems</title>
+     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <!-- LOGO (Replace src with your logo link) -->
-  <img src="assets/images/logo.png" alt="Enigma Systems Logo" class="logo">
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/Frame 1.png" alt="ENIGMA">
+        </div>
 
-  <h1>Enigma Systems</h1>
-  <p>Building intelligent, data-driven products powered by AI, Web 3.0, and next-generation technologies.</p>
-  <a href="#contact" class="btn">Get in Touch</a>
-</header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+            </ul>
+        </nav>
 
-<section>
-  <h2>What We Do</h2>
-  <div class="features">
-    <div class="card">
-      <h3>Shopify Theme Development</h3>
-      <p>Custom, high-performance Shopify themes tailored for conversion and scalability.</p>
-    </div>
-    <div class="card">
-      <h3>Shopify App Development</h3>
-      <p>Build powerful private and public Shopify apps to extend store functionality.</p>
-    </div>
-    <div class="card">
-      <h3>MERN Stack Web Apps</h3>
-      <p>Full-stack applications using MongoDB, Express, React, and Node.js.</p>
-    </div>
-    <div class="card">
-      <h3>AI Products</h3>
-      <p>Smart solutions using machine learning, computer vision, and automation.</p>
-    </div>
-    <div class="card">
-      <h3>Custom Softwares</h3>
-      <p>End-to-end software solutions built specifically for your business needs.</p>
-    </div>
-  </div>
-</section>
+        <div class="cta">
+            <a href="#contact" class="talk-btn">LET'S TALK</a>
+        </div>
+        <div class="mobile-controls">
+            <a href="#contact" class="mobile-contact-btn">Contact US</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="title-group">
+                <h1 class="hero-title">Enigma Systems</h1>
+                <p class="hero-tagline">"Engineering the Digital Future."</p>
+            </div>
 
-<section>
-  <h2>Our Vision</h2>
-  <p>To create innovative technology products that solve real-world problems using data, intelligence, and automation.</p>
-</section>
+            <div class="hero-content">
+                <p class="hero-description">
+                    We are a passionate team of developers, UI/UX designers,
+                    Shopify experts, and SEO specialists crafting high- 
+                    performance websites and digital experiences.
+                </p>
+            </div>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: contact@enigmasystems.com</p>
-  <p>Let’s build something amazing together.</p>
-</section>
+            <div class="hero-footer">
+                <a href="#" class="btn-get-to-know">
+                    Get TO Know Us 
+                    <span class="plus-icon">+</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="expertise">
+        <div class="expertise-header">
+            <h2 class="section-title">OUR EXPERTISE</h2>
+        </div>
+        <div class="expertise-inner">
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa1.png" alt="Project-Image"></div> <h3>FRONTEND DEVELOPMENT</h3>
+                <p>WE DELIVER MODERN, RESPONSIVE, AND LIGHTNING-FAST UI DEVELOPMENT USING REACT, NEXT.JS, AND TAILWIND CSS.</p>
+            </div>
 
-<footer>
-  <p>© 2026 Enigma Systems. All rights reserved.</p>
-</footer>
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa2.png" alt="Project-Image"></div>
+                <h3>MERN STACK DEVELOPMENT</h3>
+                <p>WE DELIVER FULL-STACK SOLUTIONS WITH MONGODB, EXPRESS, REACT, AND NODE.JS.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa3.png" alt="Project-Image"></div>
+                <h3>AI INTEGRATION</h3>
+                <p>WE DELIVER SMART APPLICATIONS WITH AI-POWERED CHATBOTS, NLP, AND COMPUTER VISION.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/Shopify.png" alt="Project-Image"></div>
+                <h3>SHOPIFY THEME DEVELOPMENT</h3>
+                <p>WE DELIVER CUSTOM SHOPIFY THEMES TAILORED PRECISELY TO YOUR BUSINESS NEEDS.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa5.png" alt="Project-Image"></div>
+                <h3>ENTERPRISE SOFTWARE</h3>
+                <p>WE DELIVER ROBUST ENTERPRISE APPLICATIONS FOR SCALING YOUR BUSINESS OPERATIONS.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa6.png" alt="Project-Image"></div>
+                <h3>ERP DEVELOPMENT</h3>
+                <p>WE DELIVER END-TO-END ERP SOLUTIONS TO MANAGE YOUR RESOURCES EFFICIENTLY.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/python.png" alt="Project-Image"></div>
+                <h3>PYTHON DEVELOPMENT</h3>
+                <p>WE DELIVER DATA-DRIVEN APPLICATIONS AND AUTOMATION USING PYTHON.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa8.png" alt="Project-Image"></div>
+                <h3>CUSTOM SOFTWARE</h3>
+                <p>WE DELIVER BESPOKE SOFTWARE SOLUTIONS CRAFTED FOR YOUR UNIQUE REQUIREMENTS.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-icon"><img src="images/aa9.png" alt="Project-Image"></div>
+                <h3>UI/UX DESIGN</h3>
+                <p>I CRAFT INTUITIVE AND USER-CENTERED DIGITAL EXPERIENCES AS A DEDICATED UI/UX DESIGNER.</p>
+            </div>
+        </div></div>
+    </section>
+   <section class="recent-builds">
+        <div class="builds-header">
+            <h2 class="section-title">RECENT BUILDS</h2>
+        </div>
+
+        <div class="project-block-outer">
+        <div class="project-block">
+            <div class="build-container">
+                <div class="build-text">
+                    <h3 class="build-title">PUREGRUBS — SHOPIFY STORE</h3>
+                    <p class="build-description">
+                        WE DEVELOPED A HIGH-CONVERTING SHOPIFY STORE FOR PUREGRUBS, FEATURING CLEAN, MOBILE-RESPONSIVE DESIGN, STRONG EMPHASIS ON USA-MADE QUALITY, DETAILED PRODUCT NUTRITION HIGHLIGHTS, EDUCATIONAL BLOG CONTENT FOR BACKYARD FARMERS, AND OPTIMIZED CHECKOUT WITH PROMOTIONS AND FREE SHIPPING THRESHOLDS — DELIVERING ENHANCED BRAND CREDIBILITY AND SUPERIOR SALES PERFORMANCE IN THE NATURAL PET AND POULTRY FEED NICHE.
+                    </p>
+                </div>
+                <div class="build-image">
+                    <img src="images/Framef.png" alt="Project-Image">
+                </div>
+            </div>
+            <div class="build-footer">
+                <a href="#" class="view-live-btn">
+                    <span class="btn-label">View Live</span> 
+                    <span class="plus-symbol">+</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-block">
+            <div class="build-container">
+                <div class="build-image">
+                    <img src="images/picturetree.png" alt="Project-Image">
+                </div>
+                <div class="build-text">
+                    <h3 class="build-title">PUREGRUBS — SHOPIFY STORE</h3>
+                    <p class="build-description">
+                        WE DEVELOPED A HIGH-CONVERTING SHOPIFY STORE FOR PUREGRUBS, FEATURING CLEAN, MOBILE-RESPONSIVE DESIGN, STRONG EMPHASIS ON USA-MADE QUALITY, DETAILED PRODUCT NUTRITION HIGHLIGHTS, EDUCATIONAL BLOG CONTENT FOR BACKYARD FARMERS, AND OPTIMIZED CHECKOUT WITH PROMOTIONS AND FREE SHIPPING THRESHOLDS — DELIVERING ENHANCED BRAND CREDIBILITY AND SUPERIOR SALES PERFORMANCE IN THE NATURAL PET AND POULTRY FEED NICHE.
+                    </p>
+                </div>
+            </div>
+            <div class="build-footer">
+                <a href="#" class="view-live-btn">
+                    <span class="btn-label">View Live</span> 
+                    <span class="plus-symbol">+</span>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="success-stories">
+        <div class="stories-header">
+            <h2 class="section-title">SUCCESS STORIES</h2>
+        </div>
+        <div class="inner-container-testimonial">
+        <div class="testimonial-container">
+            <div class="testimonial-card active" id="slide-1">
+                <div class="user-avatar">
+                    <img src="images/Client Picture.png" alt="Peter Johnson">
+                </div>
+                <p class="quote">
+                    "ENIGMA SYSTEMS HAS BEEN INSTRUMENTAL IN DELIVERING QUALITY MOBILE SDKS IN A VERY SHORT TIME FRAME. THEIR TEAM IS RESPONSIVE AT ALL HOURS OF THE DAY— WILLING TO ADDRESS NEW ISSUES AND BUGS ALMOST INSTANTLY."
+                </p>
+                <h4 class="user-name">PETER JOHNSON</h4>
+                <p class="user-role">PRODUCT MANAGER, KUSTOMER</p>
+            </div>
+
+            <div class="testimonial-card" id="slide-2">
+                <div class="user-avatar">
+                    <img src="images/Client Picture.png" alt="Reviewer 2">
+                </div>
+                <p class="quote">
+                    "THE UI/UX DESIGN PROVIDED BY ENIGMA SYSTEMS COMPLETELY TRANSFORMED OUR USER ENGAGEMENT. THE ATTENTION TO DETAIL AND MODERN AESTHETIC IS UNMATCHED IN THE INDUSTRY."
+                </p>
+                <h4 class="user-name">SARAH JENKINS</h4>
+                <p class="user-role">CEO, TECHFLOW</p>
+            </div>
+
+            <div class="testimonial-card" id="slide-3">
+                <div class="user-avatar">
+                    <img src="images/Client Picture.png" alt="Reviewer 3">
+                </div>
+                <p class="quote">
+                    "WORKING WITH THEIR SHOPIFY EXPERTS WAS SEAMLESS. THEY OPTIMIZED OUR CHECKOUT PROCESS AND INCREASED OUR CONVERSION RATE BY 40% WITHIN THE FIRST MONTH."
+                </p>
+                <h4 class="user-name">MICHAEL REED</h4>
+                <p class="user-role">FOUNDER, PUREGRUBS</p>
+            </div>
+        </div>
+    </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+            <span class="dot" onclick="showSlide(3)"></span>
+        </div>
+    </section>
+    <section class="tech-master">
+        <div class="tech-header">
+            <h2 class="section-title">TECH WE MASTER</h2>
+        </div>
+
+        <p class="tech-intro">
+            Our team specializes in these powerful technologies, allowing us to deliver robust,<br>
+            high-performance applications tailored to your business needs.
+        </p>
+        
+        <div class="tech-content-wrapper">
+            <div class="tech-sidebar">
+                <ul class="tech-list">
+                    <li class="tech-pill active" data-target="web-dev">Web Development</li>
+                    <li class="tech-pill" data-target="ui-ux">UI/UX</li>
+                    <li class="tech-pill" data-target="e-commerce">E-Commerce</li>
+                    <li class="tech-pill" data-target="devops">Devops</li>
+                    <li class="tech-pill" data-target="ai-ml">AI/ML</li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <div class="tech-group active" id="web-dev">
+                    <div class="capsule-grid">
+                        <div class="tech-capsule"><img src="images/JS.png" alt=""> <div class="tech-text">Java Script</div></div>
+                        <div class="tech-capsule"><img src="images/Html.png" alt=""> <div class="tech-text">HTML</div></div>
+                        <div class="tech-capsule"><img src="images/Css.png" alt=""><div class="tech-text"> CSS</div></div>
+                        <div class="tech-capsule"><img src="images/MySql.png" alt=""> <div class="tech-text">Mysql</div></div>
+                        <div class="tech-capsule"><img src="images/MongoDB.png" alt=""><div class="tech-text"> Mongo DB</div></div>
+                        <div class="tech-capsule"><img src="images/React.Js.png" alt=""><div class="tech-text">React JS</div></div>
+                        <div class="tech-capsule"><img src="images/Boot.png" alt=""><div class="tech-text"> Bootstrap</div></div>
+                        <div class="tech-capsule"><img src="images/tailwind.png" alt=""><div class="tech-text"> Tailwind</div></div>
+                    </div>
+                </div>
+
+                <div class="tech-group" id="ui-ux">
+                    <div class="capsule-grid">
+                        <div class="tech-capsule"><img src="images/Figma.png" alt=""><div class="tech-text"> Figma</div></div>
+                        <div class="tech-capsule"><img src="images/AdobeXD.png" alt=""><div class="tech-text"> Adobe XD</div></div>
+                        <div class="tech-capsule"><img src="images/Miro.png" alt=""><div class="tech-text"> Miro</div></div>
+                        <div class="tech-capsule"><img src="images/Sketch (1).png" alt=""> <div class="tech-text">Sketch</div></div>
+                    </div>
+                </div>
+
+                <div class="tech-group" id="e-commerce">
+                    <div class="capsule-grid">
+                        <div class="tech-capsule"><img src="images/Wp (1).png" alt=""><div class="tech-text"> WordPress</div></div>
+                        <div class="tech-capsule"><img src="images/Shopify.png" alt=""><div class="tech-text"> Shopify</div></div>
+                        <div class="tech-capsule"><img src="images/Liquid.png" alt=""><div class="tech-text">Liquid</div></div>
+                        <div class="tech-capsule"><img src="images/Html.png" alt=""><div class="tech-text"> Html</div></div>
+                        <div class="tech-capsule"><img src="images/Css.png" alt=""><div class="tech-text"> Css</div></div>
+                        <div class="tech-capsule"><img src="images/JS.png" alt=""><div class="tech-text"> Javascript</div></div>
+                        <div class="tech-capsule"><img src="images/node.png" alt=""><div class="tech-text"> Node.js</div></div>
+                        <div class="tech-capsule"><img src="images/MongoDB.png" alt=""><div class="tech-text"> MongoDB</div></div>
+                        <div class="tech-capsule"><img src="images/React.Js.png" alt=""><div class="tech-text"> React.js</div></div>
+                        <div class="tech-capsule"><img src="images/Shopify.png" alt=""><div class="tech-text"> Shopify Polaris</div></div>
+                        <div class="tech-capsule"><img src="images/Shopify.png" alt=""><div class="tech-text"> Shopify OS 2.0</div></div>
+                    </div>
+                </div>
+
+                <div class="tech-group" id="devops">
+                    <div class="capsule-grid">
+                        <div class="tech-capsule"><img src="images/Git.png" alt=""> <div class="tech-text">Git</div></div>
+                        <div class="tech-capsule"><img src="images/Github.png" alt=""> <div class="tech-text">GitHub</div></div>
+                        <div class="tech-capsule"><img src="images/Docker.png" alt=""> <div class="tech-text">Docker</div></div>
+                        <div class="tech-capsule"><img src="images/Kubernetes.png" alt=""><div class="tech-text"> Kubernetes</div></div>
+                        <div class="tech-capsule"><img src="images/Aws.png" alt=""><div class="tech-text"> AWS</div></div>
+                        <div class="tech-capsule"><img src="images/Googlecloud.png" alt=""><div class="tech-text"> Google Cloud Platform</div></div>
+                    </div>
+                </div>
+
+                <div class="tech-group" id="ai-ml">
+                    <div class="capsule-grid">
+                        <div class="tech-capsule"><img src="images/python.png" alt=""><div class="tech-text"> Python</div></div>
+                        <div class="tech-capsule"><img src="images/tensorflow.png" alt=""><div class="tech-text"> TensorFlow</div></div>
+                        <div class="tech-capsule"><img src="images/pytorch.png" alt=""><div class="tech-text"> PyTorch</div></div>
+                        <div class="tech-capsule"><img src="images/opencv.png" alt=""><div class="tech-text"> Open CV</div></div>
+                        <div class="tech-capsule"><img src="images/openai.png" alt=""><div class="tech-text"> Open AI</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-subtitle">I'd like to hear from you!</p>
+                <p class="contact-description">
+                    Got a question, project idea, or just want to say hi? We're excited to hear from you! 
+                    Whether it's about our services like UI/UX design, custom Shopify stores, enterprise apps, 
+                    or anything else — simply fill out the form below.
+                </p>
+                <p class="contact-description">
+                    Our team personally reads every message and will get back to you within 24 hours (often much faster). 
+                    Let's start building something great together!
+                </p>
+            </div>
+
+            <div class="contact-form-card">
+                <span class="form-say-hello">Say Hello</span>
+                <h3 class="form-title">Contact Us</h3>
+                
+                <form>
+                    <div class="input-group">
+                        <select>
+                            <option value="" disabled selected>HOW CAN WE HELP YOU ?</option>
+                            <option>Web Development</option>
+                            <option>Shopify/E-commerce</option>
+                            <option>UI/UX Design</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="FULL NAME">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="COMPANY EMAIL">
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Phone">
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Message" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-get-in-touch">
+                        GET In Touch <span class="plus-icon">+</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col about-col">
+                <div class="footer-logo">
+                    <img src="images/Frame 1.png" alt="ENIGMA">
+                </div>
+                <p class="footer-desc">
+                    Enigma Systems delivers innovative digital products and tech solutions to SMBs, startups, and enterprises. 
+                    We focus on real business impact — delivering results-driven strategies with modern UI/UX design, 
+                    lightning-fast frontend (React, Next.js, Tailwind CSS), custom Shopify stores, full-stack MERN, 
+                    AI integrations, robust enterprise apps, and bespoke software — all tailored for measurable growth and efficiency.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#technologies">Technologies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Socials</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#" class="social-link"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>03211271217</li>
+                    <li><a href="mailto:contact@enigimasystems.io">contact@enigimasystems.io</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function showSlide(slideIndex) {
+            const slides = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.dot');
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            document.getElementById('slide-' + slideIndex).classList.add('active');
+            dots[slideIndex - 1].classList.add('active');
+        }
+        document.querySelectorAll('.tech-pill').forEach(pill => {
+            pill.addEventListener('click', function() {
+                document.querySelectorAll('.tech-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+
+                document.querySelectorAll('.tech-group').forEach(group => group.classList.remove('active'));
+
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
