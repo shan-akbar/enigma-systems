@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px 0 0;
+    padding: 10px 50px;
     background-color: #000;
     color: white;
     border-bottom: 1px solid #222; 
@@ -969,6 +969,10 @@ body {
 
     .project-block{
         margin-bottom: 0;
+    }
+
+    .navbar{
+        padding: 10px 20px 0 0;
     }
 }
 
