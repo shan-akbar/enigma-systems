@@ -1,910 +1,832 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Enigma Systems | Shopify CRO &amp; Full-Stack Engineering Studio</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              obsidian: "#0A0E17",
-              deep: "#0F1422",
-              surface: "#141B2D",
-              card: "#192238",
-              border: "rgba(255, 255, 255, 0.08)",
-              blue: "#2563EB",
-              azure: "#0284C7",
-              sky: "#38BDF8",
-              indigo: "#4F46E5",
-              glow: "rgba(37, 99, 235, 0.18)"
-            }
-          },
-          fontFamily: {
-            sans: ["'Plus Jakarta Sans'", "sans-serif"],
-            mono: ["'JetBrains Mono'", "monospace"]
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    body { background-color: #0A0E17; color: #E2E8F0; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
-    .glass-panel { background: rgba(20, 27, 45, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
-    .glass-card { background: rgba(25, 34, 56, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.07); }
-    .glass-card:hover { border-color: rgba(56, 189, 248, 0.35); box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.25); }
-    .text-gradient { background: linear-gradient(135deg, #FFFFFF 20%, #93C5FD 70%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .accent-pill { background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(56, 189, 248, 0.28); color: #38BDF8; }
-    input[type=range] { accent-color: #2563EB; }
-  </style>
-</head>
-<body class="selection:bg-brand-blue selection:text-white antialiased">
 
-  <!-- TOP NAVIGATION -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0E17]/85 backdrop-blur-xl border-b border-brand-border">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.25)] group-hover:border-brand-sky transition-colors">
-          <span class="material-symbols-outlined text-brand-sky text-2xl">terminal</span>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Enigma Systems | Shopify CRO &amp; Full-Stack Development</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,700;0,800;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed":"#171e00","border-subtle":"rgba(255, 255, 255, 0.08)","surface-elevated":"#162521","on-secondary-fixed":"#002113","outline":"#8f937a","on-tertiary-container":"#00734f","on-surface-variant":"#c5c9ad","surface-container":"#1a211f","secondary":"#4edea3","text-primary":"#F7FDF9","secondary-container":"#00a572","accent-emerald":"#10B981","inverse-primary":"#546500","primary-fixed":"#ccf229","inverse-surface":"#dde4e0","inverse-on-surface":"#2b322f","on-background":"#dde4e0","surface-tint":"#b1d400","tertiary":"#ffffff","primary-container":"#ccf229","accent-electric-lime":"#D2F831","text-muted":"#8EA39B","on-surface":"#dde4e0","border-emerald-glow":"rgba(16, 185, 129, 0.35)","on-secondary":"#003824","accent-magenta":"#F472B6","surface-card":"#0F1A17","primary-fixed-dim":"#b1d400","on-secondary-container":"#00311f","on-primary":"#2a3400","background":"#0e1513","on-error":"#690005","surface-base":"#080F0D","text-dim":"#4D635A","tertiary-fixed-dim":"#68dba9","primary":"#ffffff","surface-deep":"#040807","on-tertiary-fixed-variant":"#005137","error":"#ffb4ab","on-primary-container":"#596c00","accent-emerald-bright":"#22C55E","surface":"#0e1513","secondary-fixed-dim":"#4edea3","outline-variant":"#454934","border-lime-glow":"rgba(210, 248, 49, 0.45)","surface-container-low":"#161d1b","on-primary-fixed-variant":"#3e4c00","surface-bright":"#333b38","surface-container-high":"#242b29","on-tertiary":"#003825","on-tertiary-fixed":"#002114","secondary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#005236","surface-container-lowest":"#09100e","surface-container-highest":"#2f3634","tertiary-container":"#85f8c4","error-container":"#93000a","tertiary-fixed":"#85f8c4","on-error-container":"#ffdad6","surface-dim":"#0e1513","surface-variant":"#2f3634"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin":"3rem","gutter":"1.5rem","space-xl":"2.5rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","space-md":"1rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-2xl":"4rem","space-3xl":"6rem"},fontFamily:{"headline-lg-mobile":["Epilogue"],"badge-tech":["Space Mono"],"body-md":["Plus Jakarta Sans"],"display-xl":["Epilogue"],"metric-huge":["Epilogue"],"headline-md-mobile":["Epilogue"],"headline-sm":["Epilogue"],"title-lg":["Plus Jakarta Sans"],"display-xl-mobile":["Epilogue"],"headline-md":["Epilogue"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Epilogue"],"label-sm":["Space Mono"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"badge-tech":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"700"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"display-xl":["64px",{lineHeight:"72px",letterSpacing:"-0.03em",fontWeight:"800"}],"metric-huge":["56px",{lineHeight:"60px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-md-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-xl-mobile":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"800"}],"headline-md":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface-deep font-body-md text-on-surface antialiased selection:bg-accent-electric-lime selection:text-surface-deep"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-base/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-7xl mx-auto px-gutter-mobile lg:px-margin flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="services" href="#"><div class="w-9 h-9 rounded-full p-[1px] bg-gradient-to-tr from-accent-emerald to-accent-electric-lime"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrC_WDWj6EYbwRg9TeCi1GsaIKC-rD-9v_wLeVj2_EO0e9in2vNKMMOBlxm99yGppOccYAEWGxLYwqVIDJdxkXWj-rOlhHfGlGa7JPDtWM4Hkr8-_RinGSV7cBtphbRsdo4i_oyuxU68OOyx-Qg0pevxixjODvUkuYeuQxq0gtHbMMRUnHWRgtA5JdlKB_qmf7mC_35SVHuZmQJcyFPTnYHlJ7ffpPYL4NKUnJew96TI"/></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold leading-none">ENIGMA<span class="text-accent-electric-lime">.</span></span><span class="font-label-sm text-label-sm text-text-muted tracking-wider uppercase">SYSTEMS</span></div></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-accent-electric-lime"><a aria-current="page" class="font-body-sm transition-colors text-accent-electric-lime" data-path="services" href="#">Services</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="case-studies" href="#">Case Studies / Recent Builds</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="our-tech" href="#">Our Tech</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="testimonials" href="#">Testimonials</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="process" href="#">Process</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-primary-container text-on-primary-fixed font-headline-sm text-body-sm font-bold shadow-[0_0_24px_-4px_rgba(210,248,49,0.35)] hover:bg-accent-electric-lime hover:scale-[1.02] transition-all" href="https://calendly.com/shanakbar/meeting" rel="noopener noreferrer" target="_blank"><span class="hidden sm:inline">Book Strategy Call</span><span class="sm:hidden">Book Call</span><span class="material-symbols-outlined text-[16px]">north_east</span></a></div></div></header><main class="w-full pt-20 bg-surface-deep min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden pb-space-3xl pt-space-xl">
+<!-- Ambient Radial Gradient Backdrops -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[780px] h-[520px] bg-gradient-to-b from-accent-emerald/20 via-accent-electric-lime/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 -right-48 w-[420px] h-[420px] bg-accent-emerald/10 blur-[100px] pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin flex flex-col items-center text-center">
+<!-- High-authority Badge Capsule -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-card shadow-sm hover:scale-[1.02] transition-transform">
+<span class="w-2 h-2 rounded-full bg-accent-electric-lime animate-pulse"></span>
+<span class="font-badge-tech text-badge-tech text-secondary tracking-widest uppercase">Shopify Plus Partner &amp; CRO Engineering Studio</span>
+<span class="material-symbols-outlined text-[14px] text-accent-electric-lime">verified</span>
+</div>
+<!-- Main Heading with High-Contrast Voltage -->
+<h1 class="mt-space-md font-display-xl text-headline-lg lg:text-display-xl text-text-primary tracking-tight max-w-5xl">
+        Engineering the Digital Future of <span class="bg-gradient-to-r from-accent-electric-lime via-accent-emerald-bright to-secondary bg-clip-text text-transparent  decoration-accent-electric-lime/40 decoration-wavy decoration-2">High-Converting</span> Shopify Stores.
+      </h1>
+<!-- Subtitle Value Proposition -->
+<p class="mt-space-md font-body-lg text-body-md lg:text-body-lg text-text-muted max-w-3xl leading-relaxed">
+        We engineer high-performance Shopify theme ecosystems, robust Node.js backends, and data-driven CRO strategies that systematically convert paid and organic traffic into pure, sustainable profit.
+      </p>
+<!-- CTA Trigger Array -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center justify-center gap-space-md w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-4 rounded-full bg-accent-electric-lime text-surface-deep font-headline-sm text-body-md font-bold shadow-[0_0_32px_-4px_rgba(210,248,49,0.5)] hover:scale-105 hover:bg-white transition-all" href="https://calendly.com/shanakbar/meeting" rel="noopener noreferrer" target="_blank">
+<span>Book Free CRO Audit / Let's Talk</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-4 rounded-full bg-surface-card text-text-primary font-headline-sm text-body-md hover:bg-surface-elevated hover:text-accent-electric-lime transition-all" href="#case-studies">
+<span>Explore Case Studies</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+</div>
+<!-- Under-CTA Assurance Note -->
+<div class="mt-space-sm flex items-center gap-space-sm font-label-sm text-label-sm text-text-dim">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-accent-emerald">bolt</span> 30-Min High Impact Strategy Call</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-accent-emerald">lock</span> 100% Free Audit Roadmap</span>
+</div>
+<!-- Key Performance Indicators / Proof Strip -->
+<div class="mt-space-2xl w-full grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col items-center text-center group hover:bg-surface-elevated transition-colors shadow-md">
+<div class="font-metric-huge text-headline-lg lg:text-metric-huge text-accent-electric-lime group-hover:scale-105 transition-transform tracking-tight font-extrabold">+38%</div>
+<span class="font-badge-tech text-badge-tech text-text-muted uppercase mt-space-xs">Avg. Conversion Lift</span>
+<span class="font-body-sm text-body-sm text-text-dim mt-0.5">Across 40+ Shopify Plus brands</span>
+</div>
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col items-center text-center group hover:bg-surface-elevated transition-colors shadow-md">
+<div class="font-metric-huge text-headline-lg lg:text-metric-huge text-text-primary group-hover:scale-105 transition-transform tracking-tight font-extrabold">99.8%</div>
+<span class="font-badge-tech text-badge-tech text-text-muted uppercase mt-space-xs">Core Web Vitals Pass Rate</span>
+<span class="font-body-sm text-body-sm text-text-dim mt-0.5">&lt;1.2s mobile LCP benchmarks</span>
+</div>
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col items-center text-center group hover:bg-surface-elevated transition-colors shadow-md">
+<div class="font-metric-huge text-headline-lg lg:text-metric-huge text-accent-emerald-bright group-hover:scale-105 transition-transform tracking-tight font-extrabold">$25M+</div>
+<span class="font-badge-tech text-badge-tech text-text-muted uppercase mt-space-xs">Client GMV Generated</span>
+<span class="font-body-sm text-body-sm text-text-dim mt-0.5">Verified attributed revenue uplift</span>
+</div>
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col items-center text-center group hover:bg-surface-elevated transition-colors shadow-md">
+<div class="font-metric-huge text-headline-lg lg:text-metric-huge text-secondary group-hover:scale-105 transition-transform tracking-tight font-extrabold">100%</div>
+<span class="font-badge-tech text-badge-tech text-text-muted uppercase mt-space-xs">On-Time Sprint Delivery</span>
+<span class="font-body-sm text-body-sm text-text-dim mt-0.5">Dedicated weekly deployment cycles</span>
+</div>
+</div>
+</div>
+</section>
+<!-- LOGO STRIP / ECOSYSTEM TRUST -->
+<section class="w-full py-space-lg bg-surface-base">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<p class="text-center font-badge-tech text-badge-tech uppercase tracking-wider text-text-dim mb-space-md">Trusted Tech Ecosystem &amp; Integration Partners</p>
+<div class="flex flex-wrap items-center justify-center gap-space-lg md:gap-space-2xl opacity-60">
+<span class="font-headline-sm text-title-lg text-text-muted hover:text-text-primary tracking-tighter uppercase font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-accent-emerald text-[20px]">shopping_bag</span> Shopify Plus</span>
+<span class="font-headline-sm text-title-lg text-text-muted hover:text-text-primary tracking-tighter uppercase font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-accent-emerald text-[20px]">email</span> Klaviyo</span>
+<span class="font-headline-sm text-title-lg text-text-muted hover:text-text-primary tracking-tighter uppercase font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-accent-emerald text-[20px]">autorenew</span> Recharge</span>
+<span class="font-headline-sm text-title-lg text-text-muted hover:text-text-primary tracking-tighter uppercase font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-accent-emerald text-[20px]">local_fire_department</span> Hotjar</span>
+<span class="font-headline-sm text-title-lg text-text-muted hover:text-text-primary tracking-tighter uppercase font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-accent-emerald text-[20px]">star</span> Okendo</span>
+<span class="font-headline-sm text-title-lg text-text-muted hover:text-text-primary tracking-tighter uppercase font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-accent-emerald text-[20px]">support_agent</span> Gorgias</span>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE CRO IMPACT & REVENUE LEAK ESTIMATOR -->
+<section class="w-full py-space-3xl bg-surface-deep relative">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-accent-magenta/15 text-accent-magenta font-badge-tech text-badge-tech uppercase tracking-wider mb-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-magenta"></span> Live Audit Modeling Terminal
         </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-white text-base tracking-tight flex items-center gap-1.5">
-            ENIGMA <span class="text-brand-sky font-medium">SYSTEMS</span>
-          </span>
-          <span class="font-mono text-[10px] text-slate-400 tracking-wider uppercase">Shopify CRO &amp; Tech Studio</span>
-        </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#services" class="hover:text-brand-sky transition-colors">Capabilities</a>
-        <a href="#diagnostic" class="hover:text-brand-sky transition-colors">Store Diagnostics</a>
-        <a href="#work" class="hover:text-brand-sky transition-colors">Case Studies</a>
-        <a href="#process" class="hover:text-brand-sky transition-colors">Methodology</a>
-        <a href="#testimonials" class="hover:text-brand-sky transition-colors">Client Reviews</a>
-        <a href="#stack" class="hover:text-brand-sky transition-colors">Tech Stack</a>
-      </nav>
-
-      <div class="flex items-center gap-4">
-        <a href="https://calendly.com/shanakbar/meeting" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-blue hover:bg-blue-600 text-white text-xs font-semibold tracking-wide uppercase transition-all shadow-[0_4px_20px_rgba(37,99,235,0.35)] hover:shadow-[0_6px_25px_rgba(37,99,235,0.5)]">
-          <span>Book CRO Audit</span>
-          <span class="material-symbols-outlined text-base">calendar_month</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main class="pt-20">
-
-    <!-- HERO SECTION -->
-    <section class="relative pt-24 pb-20 overflow-hidden border-b border-brand-border">
-      <!-- Ambient Backdrops -->
-      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-brand-blue/15 blur-[120px] pointer-events-none rounded-full"></div>
-      <div class="absolute top-1/3 -right-20 w-[450px] h-[350px] bg-brand-indigo/10 blur-[130px] pointer-events-none rounded-full"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:28px_28px] opacity-40 pointer-events-none"></div>
-
-      <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-        <!-- Tag -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full accent-pill mb-6 text-xs font-mono tracking-wider uppercase">
-          <span class="w-2 h-2 rounded-full bg-brand-sky animate-pulse"></span>
-          <span>Shopify Plus Engineering &amp; Data-Driven CRO</span>
-        </div>
-
-        <!-- Headline -->
-        <h1 class="text-4xl sm:text-6xl lg:text-[64px] font-extrabold tracking-tight text-white leading-[1.12] max-w-4xl mx-auto">
-          High-Velocity Themes &amp; <span class="text-gradient">Precision Conversion</span> for Ambitious E-Commerce.
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-          We replace bloated third-party apps and clunky themes with custom Liquid OS 2.0 architectures, bespoke full-stack integrations, and empirical A/B optimization.
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary">
+          Put a Number on Your Store's <span class="text-accent-magenta">Revenue Leak</span>.
+        </h2>
+<p class="font-body-md text-body-md text-text-muted max-w-2xl mt-space-xs">
+          Discover how much uncollected cash is left on the table each month. Drag the sliders to benchmark your current Shopify traffic against an engineered CRO lift.
         </p>
-
-        <!-- CTA Cluster -->
-        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://calendly.com/shanakbar/meeting" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-semibold text-sm shadow-[0_0_35px_rgba(37,99,235,0.4)] transition-all flex items-center justify-center gap-2.5">
-            <span>Schedule 30-Min Architecture Call</span>
-            <span class="material-symbols-outlined text-lg">arrow_forward</span>
-          </a>
-          <a href="#work" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-brand-surface text-slate-200 font-medium text-sm transition-all flex items-center justify-center gap-2 border border-brand-border">
-            <span>Explore Verified Case Studies</span>
-            <span class="material-symbols-outlined text-lg text-brand-sky">expand_more</span>
-          </a>
-        </div>
-
-        <!-- Telemetry Proof Bar -->
-        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-          <div class="glass-card p-5 rounded-xl text-center">
-            <div class="text-3xl font-extrabold text-white font-mono tracking-tight">+38%</div>
-            <div class="text-xs uppercase font-mono text-brand-sky mt-1 tracking-wider">Avg Conversion Lift</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">Across 40+ brand audits</div>
-          </div>
-          <div class="glass-card p-5 rounded-xl text-center">
-            <div class="text-3xl font-extrabold text-white font-mono tracking-tight">&lt;1.1s</div>
-            <div class="text-xs uppercase font-mono text-brand-sky mt-1 tracking-wider">Mobile LCP Benchmark</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">99.8% Core Web Vitals pass</div>
-          </div>
-          <div class="glass-card p-5 rounded-xl text-center">
-            <div class="text-3xl font-extrabold text-white font-mono tracking-tight">$25M+</div>
-            <div class="text-xs uppercase font-mono text-brand-sky mt-1 tracking-wider">Client GMV Generated</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">Attributed sales increase</div>
-          </div>
-          <div class="glass-card p-5 rounded-xl text-center">
-            <div class="text-3xl font-extrabold text-white font-mono tracking-tight">100%</div>
-            <div class="text-xs uppercase font-mono text-brand-sky mt-1 tracking-wider">Sprint Delivery Rate</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">Agile bi-weekly deployment</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TRUSTED INTEGRATIONS -->
-    <section class="py-8 bg-brand-deep/50 border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-6">
-        <span class="font-mono text-xs uppercase text-slate-400 tracking-wider">Engineered For The Ecosystem:</span>
-        <div class="flex flex-wrap items-center gap-8 sm:gap-12 text-slate-400 text-xs font-semibold tracking-wider uppercase">
-          <span class="flex items-center gap-2 hover:text-white transition-colors"><span class="w-2 h-2 rounded-full bg-brand-azure"></span> Shopify Plus</span>
-          <span class="flex items-center gap-2 hover:text-white transition-colors"><span class="w-2 h-2 rounded-full bg-brand-azure"></span> Klaviyo</span>
-          <span class="flex items-center gap-2 hover:text-white transition-colors"><span class="w-2 h-2 rounded-full bg-brand-azure"></span> Recharge</span>
-          <span class="flex items-center gap-2 hover:text-white transition-colors"><span class="w-2 h-2 rounded-full bg-brand-azure"></span> Hotjar</span>
-          <span class="flex items-center gap-2 hover:text-white transition-colors"><span class="w-2 h-2 rounded-full bg-brand-azure"></span> Okendo</span>
-          <span class="flex items-center gap-2 hover:text-white transition-colors"><span class="w-2 h-2 rounded-full bg-brand-azure"></span> Gorgias</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTERACTIVE STORE DIAGNOSTIC (ORIGINAL DESIGN) -->
-    <section id="diagnostic" class="py-24 border-b border-brand-border bg-gradient-to-b from-[#0A0E17] via-brand-deep/30 to-[#0A0E17]">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full accent-pill text-xs font-mono uppercase tracking-widest mb-3">
-            [STORE TELEMETRY SIMULATOR]
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Calculate Your Untapped Revenue Potential
+</div>
+<!-- Dual Pane Calculator Interface -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch bg-surface-card p-space-lg lg:p-space-xl rounded-xl shadow-xl">
+<!-- Input Parameters Pane -->
+<div class="lg:col-span-6 flex flex-col justify-between space-y-space-lg pr-0 lg:pr-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-title-lg text-title-lg text-text-primary">Your Store Parameters</span>
+<span class="font-label-sm text-label-sm text-text-dim uppercase">Baseline Telemetry</span>
+</div>
+<!-- Slider 1: Monthly Visitors -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-body-md text-body-md text-on-surface" for="traffic-slider">Monthly Store Visitors</label>
+<span class="font-badge-tech text-headline-sm text-accent-electric-lime font-bold" id="traffic-display">50,000</span>
+</div>
+<input class="w-full accent-accent-electric-lime cursor-pointer bg-surface-elevated h-2.5 rounded-full" id="traffic-slider" max="300000" min="10000" step="5000" type="range" value="50000"/>
+<div class="flex justify-between font-label-sm text-label-sm text-text-dim">
+<span>10K/mo</span>
+<span>150K/mo</span>
+<span>300K+/mo</span>
+</div>
+</div>
+<!-- Slider 2: Average Order Value -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-body-md text-body-md text-on-surface" for="aov-slider">Average Order Value (AOV)</label>
+<span class="font-badge-tech text-headline-sm text-accent-electric-lime font-bold" id="aov-display">$85</span>
+</div>
+<input class="w-full accent-accent-electric-lime cursor-pointer bg-surface-elevated h-2.5 rounded-full" id="aov-slider" max="300" min="20" step="5" type="range" value="85"/>
+<div class="flex justify-between font-label-sm text-label-sm text-text-dim">
+<span>$20</span>
+<span>$150</span>
+<span>$300+</span>
+</div>
+</div>
+<!-- Slider 3: Current CVR -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-body-md text-body-md text-on-surface" for="cvr-slider">Current Conversion Rate</label>
+<span class="font-badge-tech text-headline-sm text-accent-electric-lime font-bold" id="cvr-display">1.8%</span>
+</div>
+<input class="w-full accent-accent-electric-lime cursor-pointer bg-surface-elevated h-2.5 rounded-full" id="cvr-slider" max="4.0" min="0.5" step="0.1" type="range" value="1.8"/>
+<div class="flex justify-between font-label-sm text-label-sm text-text-dim">
+<span>0.5% (Severe Leak)</span>
+<span>2.0% (Average)</span>
+<span>4.0% (Strong)</span>
+</div>
+</div>
+<!-- Baseline Calculation Card -->
+<div class="p-space-md rounded-lg bg-surface-elevated flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">Estimated Current Monthly Gross:</span>
+<span class="font-badge-tech text-headline-sm text-text-primary font-bold" id="current-rev-display">$76,500</span>
+</div>
+</div>
+<!-- Output Forecast Pane -->
+<div class="lg:col-span-6 bg-surface-elevated p-space-lg lg:p-space-xl rounded-xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-accent-emerald/10 rounded-full blur-3xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-badge-tech text-badge-tech uppercase tracking-wider text-accent-emerald-bright flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> Post-Optimization Forecast
+              </span>
+<span class="px-space-xs py-0.5 rounded bg-accent-emerald/20 text-accent-emerald font-badge-tech text-badge-tech">+25% Lift Model</span>
+</div>
+<!-- Calculated Metrics -->
+<div class="mt-space-lg space-y-space-md">
+<div>
+<span class="font-body-sm text-body-sm text-text-muted block">Projected New Conversion Rate</span>
+<div class="flex items-baseline gap-space-sm mt-0.5">
+<span class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary font-bold" id="new-cvr-display">2.25%</span>
+<span class="font-badge-tech text-badge-tech text-accent-electric-lime">+0.45% Absolute Uplift</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<span class="font-body-sm text-body-sm text-text-muted block">Additional Unlocked Monthly Revenue</span>
+<span class="font-metric-huge text-headline-lg lg:text-metric-huge text-accent-electric-lime font-extrabold tracking-tight block mt-1" id="monthly-lift-display">
+                  +$19,125<span class="text-headline-sm text-text-muted font-normal"> /mo</span>
+</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-text-muted block">Annualized Untapped GMV Run Rate</span>
+<span class="font-headline-lg text-headline-lg text-accent-emerald-bright font-bold" id="annual-lift-display">
+                  +$229,500<span class="text-body-md text-text-muted font-normal"> /year</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Trigger -->
+<div class="mt-space-xl pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-lg py-3.5 rounded-full bg-accent-electric-lime text-surface-deep font-headline-sm text-body-md font-bold hover:bg-white transition-all shadow-[0_0_24px_rgba(210,248,49,0.3)]" href="https://calendly.com/shanakbar/meeting" rel="noopener noreferrer" target="_blank">
+<span>Claim This Uplift with Our CRO Sprint</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<p class="text-center font-label-sm text-label-sm text-text-dim mt-2">Zero long-term lock-in • Revenue share &amp; sprint-based options available</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CORE SERVICES & EXPERTISE MATRIX -->
+<section class="w-full py-space-3xl bg-surface-base">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<span class="font-badge-tech text-badge-tech text-secondary uppercase tracking-widest block mb-space-xs">Our Engineering Arsenal</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary tracking-tight">
+            Everything it Takes to <span class="text-accent-electric-lime">Convert</span> More of Your Traffic.
           </h2>
-          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-            Discover how systematic checkout friction removal, sub-second speed optimization, and strategic upsells compound your bottom line.
-          </p>
-        </div>
-
-        <!-- Telemetry Simulator Frame -->
-        <div class="glass-panel p-8 sm:p-12 rounded-2xl border border-brand-border shadow-2xl">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
-            <!-- Controls Column -->
-            <div class="lg:col-span-6 space-y-7">
-              <div class="flex items-center justify-between pb-3 border-b border-brand-border">
-                <span class="text-xs font-mono uppercase text-slate-300 font-semibold tracking-wider">Current Store Telemetry</span>
-                <span class="text-[11px] font-mono text-brand-sky">LIVE SIMULATOR</span>
-              </div>
-
-              <!-- Slider 1 -->
-              <div>
-                <div class="flex justify-between items-center text-sm mb-2">
-                  <span class="text-slate-300 font-medium">Monthly Store Sessions</span>
-                  <span id="sessions-val" class="font-mono text-brand-sky font-bold text-base">50,000</span>
-                </div>
-                <input id="sessions-input" type="range" min="10000" max="250000" step="5000" value="50000" class="w-full h-2 bg-brand-surface rounded-lg cursor-pointer appearance-none"/>
-                <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
-                  <span>10,000</span>
-                  <span>125,000</span>
-                  <span>250,000+</span>
-                </div>
-              </div>
-
-              <!-- Slider 2 -->
-              <div>
-                <div class="flex justify-between items-center text-sm mb-2">
-                  <span class="text-slate-300 font-medium">Average Order Value (AOV)</span>
-                  <span id="aov-val" class="font-mono text-brand-sky font-bold text-base">$85</span>
-                </div>
-                <input id="aov-input" type="range" min="25" max="300" step="5" value="85" class="w-full h-2 bg-brand-surface rounded-lg cursor-pointer appearance-none"/>
-                <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
-                  <span>$25</span>
-                  <span>$150</span>
-                  <span>$300+</span>
-                </div>
-              </div>
-
-              <!-- Slider 3 -->
-              <div>
-                <div class="flex justify-between items-center text-sm mb-2">
-                  <span class="text-slate-300 font-medium">Current Conversion Rate (CVR)</span>
-                  <span id="cvr-val" class="font-mono text-brand-sky font-bold text-base">1.8%</span>
-                </div>
-                <input id="cvr-input" type="range" min="0.6" max="4.0" step="0.1" value="1.8" class="w-full h-2 bg-brand-surface rounded-lg cursor-pointer appearance-none"/>
-                <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
-                  <span>0.6%</span>
-                  <span>2.0%</span>
-                  <span>4.0%</span>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-xl bg-brand-deep/80 border border-brand-border flex items-center justify-between">
-                <div>
-                  <span class="text-[10px] font-mono uppercase text-slate-400 block">Baseline Monthly Revenue</span>
-                  <span id="baseline-rev" class="text-lg font-bold text-white font-mono">$76,500 / mo</span>
-                </div>
-                <span class="text-xs font-mono text-slate-400">900 orders/mo</span>
-              </div>
-            </div>
-
-            <!-- Projections Column -->
-            <div class="lg:col-span-6 bg-brand-surface/90 border border-brand-blue/30 p-8 rounded-2xl relative flex flex-col justify-between h-full shadow-[0_0_40px_rgba(37,99,235,0.12)]">
-              <div>
-                <div class="flex items-center justify-between pb-4 border-b border-brand-border">
-                  <span class="text-xs font-mono text-brand-sky uppercase font-semibold flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm">trending_up</span> Engineered Growth Target (+25% Lift)
-                  </span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-blue/20 text-brand-sky">EMPIRICAL BENCHMARK</span>
-                </div>
-
-                <div class="mt-6">
-                  <span class="text-xs font-mono uppercase text-slate-400 tracking-wider">Estimated Monthly Cashflow Expansion</span>
-                  <div id="monthly-growth" class="text-4xl sm:text-5xl font-extrabold text-white font-mono tracking-tight mt-1">
-                    +$19,125 <span class="text-lg font-normal text-slate-400">/mo</span>
-                  </div>
-                </div>
-
-                <div class="mt-6 p-4 rounded-xl bg-brand-deep border border-brand-border flex items-center justify-between">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase text-slate-400">Annualized Run Rate Increase</span>
-                    <div id="annual-growth" class="text-xl sm:text-2xl font-bold text-brand-sky font-mono mt-0.5">+$229,500 / yr</div>
-                  </div>
-                  <div class="text-right">
-                    <span class="text-[10px] font-mono uppercase text-slate-400">Optimized CVR</span>
-                    <div id="target-cvr" class="text-sm font-semibold text-white font-mono mt-0.5">2.25%</div>
-                  </div>
-                </div>
-
-                <p class="text-xs text-slate-400 mt-4 leading-relaxed">
-                  Based on statistical lifts across 40+ high-traffic Shopify stores via sub-second mobile page loads, dynamic slideout cart up-sells, and friction-free checkout journeys.
-                </p>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-brand-border">
-                <a href="https://calendly.com/shanakbar/meeting" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(37,99,235,0.4)] transition-all">
-                  <span>Claim Your Full CRO Action Plan</span>
-                  <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-
+</div>
+<p class="font-body-md text-body-md text-text-muted max-w-md">
+          One dedicated full-stack squad for research, design, custom Shopify code, and AI workflows. Pick what your store needs or activate the full ecosystem.
+        </p>
+</div>
+<!-- Bento Grid Architecture -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-all group shadow-md">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-accent-electric-lime group-hover:bg-accent-electric-lime group-hover:text-surface-deep transition-colors mb-space-lg">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<span class="font-badge-tech text-label-sm text-secondary uppercase">Front-End &amp; Theme Velocity</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mt-1">Shopify OS 2.0 &amp; Custom Liquid</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm leading-relaxed">
+              Tailored, zero-bloat Shopify themes engineered to pass Google Core Web Vitals with sub-second paint times. Custom section schemas, modular layouts, and dynamic micro-animations without external third-party app drag.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-xs font-badge-tech text-badge-tech text-accent-electric-lime">
+<span>Liquid / Polaris / Tailwind / React</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-all group shadow-md">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-accent-emerald-bright group-hover:bg-accent-emerald-bright group-hover:text-surface-deep transition-colors mb-space-lg">
+<span class="material-symbols-outlined text-[28px]">query_stats</span>
+</div>
+<span class="font-badge-tech text-label-sm text-secondary uppercase">Behavioral Science</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mt-1">Data-Backed CRO Audits &amp; A/B Testing</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm leading-relaxed">
+              Heatmap telemetry, video session tear-downs, and customer psychology teardowns. We identify friction at your cart drawer, product pages, and checkout flow—then deploy rigorous A/B experiments to scientifically validate revenue lifts.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-xs font-badge-tech text-badge-tech text-accent-emerald-bright">
+<span>Intelligems / VWO / Hotjar / GA4</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-all group shadow-md">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-surface-deep transition-colors mb-space-lg">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<span class="font-badge-tech text-label-sm text-secondary uppercase">Full-Stack Scale</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mt-1">Full-Stack MERN &amp; Headless APIs</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm leading-relaxed">
+              Custom Node.js, Express, MongoDB, and Next.js applications that extend Shopify way beyond its standard limitations. Custom checkout extensions, high-volume inventory portals, and seamless headless storefront frontends.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-xs font-badge-tech text-badge-tech text-secondary">
+<span>Node.js / Express / Mongo / REST &amp; GraphQL</span>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-all group shadow-md">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-accent-electric-lime group-hover:bg-accent-electric-lime group-hover:text-surface-deep transition-colors mb-space-lg">
+<span class="material-symbols-outlined text-[28px]">psychology</span>
+</div>
+<span class="font-badge-tech text-label-sm text-secondary uppercase">Intelligent Systems</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mt-1">AI Integrations &amp; Automation</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm leading-relaxed">
+              Smart e-commerce workflows powered by OpenAI, NLP vector search, and automated customer concierges. Dynamic product bundling bots that anticipate user questions and drive real-time average order value expansion.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-xs font-badge-tech text-badge-tech text-accent-electric-lime">
+<span>OpenAI API / Python / LangChain / Pinecone</span>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-all group shadow-md">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-accent-emerald-bright group-hover:bg-accent-emerald-bright group-hover:text-surface-deep transition-colors mb-space-lg">
+<span class="material-symbols-outlined text-[28px]">lan</span>
+</div>
+<span class="font-badge-tech text-label-sm text-secondary uppercase">Enterprise Architecture</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mt-1">Enterprise ERP &amp; Data Pipeline Sync</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm leading-relaxed">
+              Bi-directional integrations linking Shopify Plus with SAP, NetSuite, and warehouse management systems. Real-time SKU tracking, multi-currency accounting bridges, and automated fulfillment fail-safes.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-xs font-badge-tech text-badge-tech text-accent-emerald-bright">
+<span>AWS Lambda / Docker / Webhooks / Kafka</span>
+</div>
+</div>
+<!-- Service Card 6 -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-all group shadow-md">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-surface-deep transition-colors mb-space-lg">
+<span class="material-symbols-outlined text-[28px]">design_services</span>
+</div>
+<span class="font-badge-tech text-label-sm text-secondary uppercase">Conversion UX/UI</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mt-1">Custom DTC Product Page Redesigns</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm leading-relaxed">
+              Bespoke, brand-elevating UI/UX prototypes engineered in Figma and coded natively in Liquid. We design high-converting PDPs, offer ladders, advertorials, and sticky checkout drawers tailored specifically for DTC brands.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-xs font-badge-tech text-badge-tech text-secondary">
+<span>Figma / Prototyping / Design Systems</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROVEN RECENT BUILDS / CASE STUDIES -->
+<section class="w-full py-space-3xl bg-surface-deep relative" id="case-studies">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Title Header -->
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-badge-tech text-badge-tech text-accent-electric-lime uppercase tracking-widest mb-space-xs">Real Verifiable Deployments</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary">
+          Results from Live Shopify Builds.
+        </h2>
+<p class="font-body-md text-body-md text-text-muted max-w-2xl mt-space-xs">
+          Numbers straight from Shopify and Google Analytics. Here is how precision architecture and conversion-first UI translate into cold hard revenue.
+        </p>
+</div>
+<!-- Case Study 1: PureGrubs -->
+<div class="bg-surface-card rounded-2xl overflow-hidden shadow-2xl mb-space-2xl grid grid-cols-1 lg:grid-cols-12 items-stretch group">
+<!-- Case Details (Left) -->
+<div class="lg:col-span-6 p-space-xl lg:p-space-2xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-elevated text-secondary font-badge-tech text-badge-tech uppercase">Live Shopify Store</span>
+<span class="text-text-dim">•</span>
+<span class="font-badge-tech text-badge-tech text-text-muted uppercase">DTC Pet &amp; Poultry Feed</span>
+</div>
+<h3 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary tracking-tight">PureGrubs — Shopify Store</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-md leading-relaxed">
+              We developed a high-converting Shopify store for PureGrubs, featuring clean, mobile-responsive design, strong emphasis on USA-made quality, detailed product nutrition highlights, educational blog content for backyard farmers, and optimized checkout with promotions and free shipping thresholds — delivering enhanced brand credibility and superior sales performance in the natural pet and poultry feed niche.
+            </p>
+<!-- Metrics Pill Box -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-lg p-space-md rounded-xl bg-surface-elevated">
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-lg text-accent-electric-lime font-bold">+28%</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Store CVR Lift</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-lg text-accent-emerald-bright font-bold">1.1s</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Load Speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-lg text-secondary font-bold">+44%</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Cart Conversion</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl flex items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-accent-electric-lime text-surface-deep font-headline-sm text-body-sm font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(210,248,49,0.3)]" href="https://puregrubs.com" rel="noopener noreferrer" target="_blank">
+<span>View Live Store</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+<a class="font-badge-tech text-badge-tech text-text-muted hover:text-accent-electric-lime transition-colors flex items-center gap-1" href="https://calendly.com/shanakbar/meeting">
+<span>Request Teardown</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Case Visual Display (Right) -->
+<div class="lg:col-span-6 bg-surface-elevated relative overflow-hidden flex items-center justify-center p-space-lg min-h-[380px]">
+<img class="w-full h-full  object-cover rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500" data-alt="High-converting modern Shopify ecommerce store homepage for PureGrubs natural pet and poultry feed brand, showing rich product cards, nutrition badges, free shipping meter, mobile responsive preview on dark slate backdrop with emerald accents" src="puregrubs.png"/>
+<div class="absolute bottom-6 right-6 bg-surface-card/90 backdrop-blur-md px-4 py-2 rounded-full font-badge-tech text-label-sm text-accent-emerald-bright shadow-lg">
+            ✓ Full Custom Liquid + Free Shipping Bar
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE CAPABILITIES -->
-    <section id="services" class="py-24 border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <span class="font-mono text-xs uppercase text-brand-sky tracking-widest block mb-2">[ENGINEERING EXPERTISE]</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Architectural Systems Built For Conversion
-            </h2>
+</div>
+</div>
+<!-- Case Study 2: T1A Auto -->
+<div class="bg-surface-card rounded-2xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 items-stretch group">
+<!-- Case Details (Left) -->
+<div class="lg:col-span-6 p-space-xl lg:p-space-2xl flex flex-col justify-between order-2 lg:order-1">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-elevated text-secondary font-badge-tech text-badge-tech uppercase">Live Shopify Store</span>
+<span class="text-text-dim">•</span>
+<span class="font-badge-tech text-badge-tech text-text-muted uppercase">Automotive OEM Replacement</span>
+</div>
+<h3 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary tracking-tight">T1A Auto — Shopify Store</h3>
+<p class="font-body-md text-body-md text-text-muted mt-space-md leading-relaxed">
+              We developed a high-performance Shopify store for T1A Auto, a USA-based automotive parts brand specializing in OEM-quality replacement components. The store features a clean, conversion-focused design, advanced product organization by vehicle make and category, mobile-optimized shopping experience, trust-building warranty and support sections, and SEO-driven content structure to improve organic traffic. We also implemented enhanced product presentation, quick shop functionality, educational blog content, and streamlined customer journeys to boost engagement, credibility, and sales performance in the competitive auto parts market.
+            </p>
+<!-- Metrics Pill Box -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-lg p-space-md rounded-xl bg-surface-elevated">
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-lg text-accent-electric-lime font-bold">+35%</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Search-to-Cart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-lg text-accent-emerald-bright font-bold">100%</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Fitment Accuracy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-lg text-secondary font-bold">+52%</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Mobile Checkout</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl flex items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-accent-electric-lime text-surface-deep font-headline-sm text-body-sm font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(210,248,49,0.3)]" href="https://t1aauto.com/" rel="noopener noreferrer" target="_blank">
+<span>View Live Store</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+<a class="font-badge-tech text-badge-tech text-text-muted hover:text-accent-electric-lime transition-colors flex items-center gap-1" href="https://calendly.com/shanakbar/meeting">
+<span>Book Strategy Call</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Case Visual Display (Right) -->
+<div class="lg:col-span-6 bg-surface-elevated relative overflow-hidden flex items-center justify-center p-space-lg min-h-[380px] order-1 lg:order-2">
+<img class="w-full h-full object-left object-cover rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500" data-alt="Dark technical automotive ecommerce store interface for T1A Auto, vehicle make model year parts filter, warranty badge, fast mobile quick buy drawer on dark high-contrast background with neon accents" src="t1aauto.png"/>
+<div class="absolute bottom-6 left-6 bg-surface-card/90 backdrop-blur-md px-4 py-2 rounded-full font-badge-tech text-label-sm text-accent-electric-lime shadow-lg">
+            ✓ Year/Make/Model Fitment Engine
           </div>
-          <p class="text-slate-400 text-sm max-w-md leading-relaxed">
-            Eliminate slow plugins and generic templates. We build bespoke e-commerce engines tailored for scale and speed.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center text-brand-sky mb-6">
-                <span class="material-symbols-outlined text-2xl">speed</span>
-              </div>
-              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Performance Frontend</span>
-              <h3 class="text-lg font-bold text-white mt-1">Shopify OS 2.0 &amp; Custom Liquid Themes</h3>
-              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                Clean, hand-coded Liquid templates engineered to achieve sub-second LCP scores. Custom section schemas give your marketing team total drag-and-drop freedom without performance compromises.
-              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- METHODOLOGY / SPRINT PROCESS TIMELINE -->
+<section class="w-full py-space-3xl bg-surface-base">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-badge-tech text-badge-tech text-secondary uppercase tracking-widest mb-space-xs">Systematic Execution</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary">
+          Our Process to <span class="text-accent-electric-lime">Scale</span> Your Shopify Store.
+        </h2>
+<p class="font-body-md text-body-md text-text-muted max-w-2xl mt-space-xs">
+          Five continuous phases designed to compound. Every cycle produces verified data, making each subsequent sprint more profitable.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-colors shadow-sm">
+<div>
+<span class="font-badge-tech text-headline-md text-accent-electric-lime font-bold block mb-space-sm opacity-80">01</span>
+<h4 class="font-title-lg text-title-lg text-text-primary font-bold">Research &amp; Audit</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+              Deep telemetry: GA4 anomalies, heatmaps, live session recordings, and checkout leaks identified down to the pixel.
+            </p>
+</div>
+<span class="font-label-sm text-label-sm text-text-dim mt-space-md uppercase">Day 1 - 3</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-colors shadow-sm">
+<div>
+<span class="font-badge-tech text-headline-md text-accent-emerald-bright font-bold block mb-space-sm opacity-80">02</span>
+<h4 class="font-title-lg text-title-lg text-text-primary font-bold">Prioritize Hypotheses</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+              Every friction point scored on revenue impact vs development effort. Quick wins locked into the immediate sprint roadmap.
+            </p>
+</div>
+<span class="font-label-sm text-label-sm text-text-dim mt-space-md uppercase">Day 4 - 6</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-colors shadow-sm">
+<div>
+<span class="font-badge-tech text-headline-md text-secondary font-bold block mb-space-sm opacity-80">03</span>
+<h4 class="font-title-lg text-title-lg text-text-primary font-bold">Design &amp; Build</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+              Zero-bloat Liquid, high-converting UX layouts, and custom Shopify sections engineered natively in-house.
+            </p>
+</div>
+<span class="font-label-sm text-label-sm text-text-dim mt-space-md uppercase">Sprint Week 2</span>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-colors shadow-sm">
+<div>
+<span class="font-badge-tech text-headline-md text-accent-electric-lime font-bold block mb-space-sm opacity-80">04</span>
+<h4 class="font-title-lg text-title-lg text-text-primary font-bold">A/B Testing</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+              Hypotheses tested live until 95%+ statistical significance is established. No assumptions; cold empirical proof.
+            </p>
+</div>
+<span class="font-label-sm text-label-sm text-text-dim mt-space-md uppercase">Sprint Week 3</span>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-card p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-elevated transition-colors shadow-sm">
+<div>
+<span class="font-badge-tech text-headline-md text-accent-emerald font-bold block mb-space-sm opacity-80">05</span>
+<h4 class="font-title-lg text-title-lg text-text-primary font-bold">Scale What Wins</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">
+              Winning variants merged permanently into production. Data logged into your customized brand experimentation playbook.
+            </p>
+</div>
+<span class="font-label-sm text-label-sm text-text-dim mt-space-md uppercase">Ongoing Compound</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CLIENT TESTIMONIALS & SUCCESS STORIES (VERBATIM) -->
+<section class="w-full py-space-3xl bg-surface-deep">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-badge-tech text-badge-tech text-secondary uppercase tracking-widest mb-space-xs">Verifiable Client Feedback</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary">
+          Our Clients Can <span class="text-accent-electric-lime">Speak</span> For Us.
+        </h2>
+<p class="font-body-md text-body-md text-text-muted max-w-xl mt-space-xs">
+          Authentic founder reviews from partners who trust Shan and Enigma Systems to engineer their mission-critical Shopify infrastructure.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- Review 1: Jessica Gatt -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between shadow-lg relative group hover:bg-surface-elevated transition-all">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-accent-electric-lime mb-space-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Shan was fantastic in building my Shopify website! My store is far more complex than a standard Shopify site, there was no way I could build it myself, so I needed a true expert. Shan took on the challenge effortlessly and created a seamless, user-friendly system that works perfectly. He was easy to communicate with, even setting up multiple Zoom meetings to ensure everything was just right. No task was too difficult, he tackled every request with skill and patience. Beyond the build, his ongoing support has been outstanding, always happy to fix, edit, and adjust anything I need. If you need a talented, reliable, and supportive Shopify expert, I cannot recommend Shan enough!"
+            </p>
+</div>
+<div class="mt-space-xl pt-space-md bg-surface-elevated/40 -mx-space-xl -mb-space-xl p-space-md rounded-b-xl flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-accent-emerald/20 flex items-center justify-center font-headline-sm text-accent-electric-lime font-bold">
+              JG
             </div>
-            <div class="mt-6 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-sky">
-              Liquid / Theme 2.0 / Tailwind CSS / Vanilla JS
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-text-primary font-bold leading-tight">Jessica Gatt</span>
+<span class="font-body-sm text-body-sm text-text-muted">Founder &amp; Owner, Your Perfect Planner</span>
+</div>
+</div>
+</div>
+<!-- Review 2: Troy Remelski -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between shadow-lg relative group hover:bg-surface-elevated transition-all">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-accent-electric-lime mb-space-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Shan has worked for me previously making several changes to my Shopify stores. He was fast, communicated well, and an overall pleasure to work with. When I asked him to work on something that was outside of his current skillset, he told me that he would have to learn it and it would take additional time. His upfront honesty was very much appreciated, and I hired him for the job. He quickly learned what was necessary and worked diligently. He did some great work... and acquired some new skills. I look forward to the day we get to work together again."
+            </p>
+</div>
+<div class="mt-space-xl pt-space-md bg-surface-elevated/40 -mx-space-xl -mb-space-xl p-space-md rounded-b-xl flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary/20 flex items-center justify-center font-headline-sm text-secondary font-bold">
+              TR
             </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center text-brand-sky mb-6">
-                <span class="material-symbols-outlined text-2xl">query_stats</span>
-              </div>
-              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Behavioral Analytics</span>
-              <h3 class="text-lg font-bold text-white mt-1">Scientific CRO Audits &amp; A/B Experimentation</h3>
-              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                Heatmaps, video session audits, and statistical teardowns of your buyer journeys. We identify drop-offs across collection pages, PDPs, and carts—then deploy multi-variant experiments to validate gains.
-              </p>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-text-primary font-bold leading-tight">Troy Remelski</span>
+<span class="font-body-sm text-body-sm text-text-muted">CEO, Conquest Media, LLC</span>
+</div>
+</div>
+</div>
+<!-- Review 3: Chris O'Brien -->
+<div class="bg-surface-card p-space-xl rounded-xl flex flex-col justify-between shadow-lg relative group hover:bg-surface-elevated transition-all">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-accent-electric-lime mb-space-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Shan did an exceptional job working on our conversion tracking issues. If you need help with your Shopify store or conversion tracking, Shan will do a great job and provide incredible service. Shan took time on numerous calls to discuss the project and educate me on the challenges and solution he came up with. I highly recommend working with Shan."
+            </p>
+</div>
+<div class="mt-space-xl pt-space-md bg-surface-elevated/40 -mx-space-xl -mb-space-xl p-space-md rounded-b-xl flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-accent-emerald-bright/20 flex items-center justify-center font-headline-sm text-accent-emerald-bright font-bold">
+              CO
             </div>
-            <div class="mt-6 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-sky">
-              Intelligems / VWO / Hotjar / GA4 Telemetry
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center text-brand-sky mb-6">
-                <span class="material-symbols-outlined text-2xl">layers</span>
-              </div>
-              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Custom Middleware</span>
-              <h3 class="text-lg font-bold text-white mt-1">Full-Stack MERN &amp; Headless Applications</h3>
-              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                Custom Node.js, Express, MongoDB, and Next.js microservices extending your Shopify store far beyond standard boundaries. Custom portals, dynamic bundles, and high-throughput event webhooks.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-sky">
-              Node.js / Express / MongoDB / Next.js / GraphQL
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center text-brand-sky mb-6">
-                <span class="material-symbols-outlined text-2xl">smart_toy</span>
-              </div>
-              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Intelligent Automation</span>
-              <h3 class="text-lg font-bold text-white mt-1">AI Integrations &amp; Smart E-Commerce Bots</h3>
-              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                Smart e-commerce workflows powered by OpenAI endpoints, semantic vector search, dynamic bundling bots, and automated customer triage systems to increase conversion and retention.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-sky">
-              OpenAI API / Python / LangChain / Vector Search
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center text-brand-sky mb-6">
-                <span class="material-symbols-outlined text-2xl">hub</span>
-              </div>
-              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Enterprise Pipelines</span>
-              <h3 class="text-lg font-bold text-white mt-1">ERP, CRM &amp; Multi-Warehouse Synchronization</h3>
-              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                Bi-directional sync connecting Shopify Plus with SAP, NetSuite, and custom WMS backends. Fault-tolerant failovers, live inventory reconciliation, and multi-currency ledgers.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-sky">
-              AWS Lambda / EventBridge / REST &amp; GraphQL
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-blue/30 flex items-center justify-center text-brand-sky mb-6">
-                <span class="material-symbols-outlined text-2xl">draw</span>
-              </div>
-              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Conversion Design</span>
-              <h3 class="text-lg font-bold text-white mt-1">High-Impact PDPs &amp; Interactive UI/UX</h3>
-              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                Bespoke interface designs crafted in Figma and implemented pixel-for-pixel into native Liquid. Tiered quantity breaks, interactive sticky buy bars, and frictionless slideout carts.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-sky">
-              Figma / Design Tokens / Rapid Prototyping
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="work" class="py-24 border-b border-brand-border bg-brand-deep/30">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="font-mono text-xs uppercase text-brand-sky tracking-widest block mb-2">[VERIFIED BUILDS]</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Case Studies From Production
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-text-primary font-bold leading-tight">Chris O'Brien</span>
+<span class="font-body-sm text-body-sm text-text-muted">Founder &amp; Owner, Digital Giants</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TECH WE MASTER (EXTENDED MATRIX) -->
+<section class="w-full py-space-3xl bg-surface-base">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-badge-tech text-badge-tech text-secondary uppercase tracking-widest block mb-space-xs">Production Infrastructure</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary tracking-tight">
+            Tech We Master.
           </h2>
-          <p class="text-slate-400 text-sm mt-3">
-            Real performance benchmarks and live deployments delivered by Shan and the Enigma Systems team.
-          </p>
-        </div>
-
-        <!-- Case 1: PureGrubs -->
-        <div class="glass-panel rounded-2xl overflow-hidden mb-12 border border-brand-border grid grid-cols-1 lg:grid-cols-12 items-center">
-          <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-4">
-                <span class="px-2.5 py-1 rounded bg-brand-blue/20 text-brand-sky font-mono text-[10px] uppercase font-semibold">Live Shopify Store</span>
-                <span class="text-slate-500">•</span>
-                <span class="font-mono text-[10px] text-slate-400 uppercase">DTC Pet &amp; Poultry Feed</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted max-w-md">
+          Modern, battle-tested software stacks across Shopify, full-stack JavaScript, DevOps pipelines, and AI frameworks.
+        </p>
+</div>
+<!-- Category Badges Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-space-sm">
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-electric-lime mb-2 group-hover:scale-110 transition-transform">shopping_cart</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">Shopify OS 2.0</span>
+<span class="font-label-sm text-label-sm text-text-dim">Liquid Architecture</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-emerald-bright mb-2 group-hover:scale-110 transition-transform">code</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">React &amp; Next.js</span>
+<span class="font-label-sm text-label-sm text-text-dim">High Speed Frontend</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-2 group-hover:scale-110 transition-transform">dns</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">Node.js &amp; Express</span>
+<span class="font-label-sm text-label-sm text-text-dim">Robust Backends</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-electric-lime mb-2 group-hover:scale-110 transition-transform">storage</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">MongoDB &amp; SQL</span>
+<span class="font-label-sm text-label-sm text-text-dim">Scalable Schemas</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-emerald-bright mb-2 group-hover:scale-110 transition-transform">smart_toy</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">OpenAI &amp; Python</span>
+<span class="font-label-sm text-label-sm text-text-dim">NLP &amp; Automations</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-2 group-hover:scale-110 transition-transform">cloud</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">AWS &amp; Docker</span>
+<span class="font-label-sm text-label-sm text-text-dim">Cloud Deployment</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-electric-lime mb-2 group-hover:scale-110 transition-transform">palette</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">Tailwind CSS</span>
+<span class="font-label-sm text-label-sm text-text-dim">Design Systems</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-emerald mb-2 group-hover:scale-110 transition-transform">draw</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">Figma &amp; UI/UX</span>
+<span class="font-label-sm text-label-sm text-text-dim">CRO Wireframing</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-2 group-hover:scale-110 transition-transform">layers</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">Shopify Polaris</span>
+<span class="font-label-sm text-label-sm text-text-dim">Custom App Admin</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-electric-lime mb-2 group-hover:scale-110 transition-transform">sync_alt</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">GraphQL &amp; REST</span>
+<span class="font-label-sm text-label-sm text-text-dim">Storefront APIs</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-accent-emerald-bright mb-2 group-hover:scale-110 transition-transform">hub</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">Git &amp; CI/CD</span>
+<span class="font-label-sm text-label-sm text-text-dim">Zero Downtime</span>
+</div>
+<div class="bg-surface-card p-space-md rounded-lg flex flex-col items-center justify-center text-center group hover:bg-surface-elevated transition-colors">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-2 group-hover:scale-110 transition-transform">tune</span>
+<span class="font-title-lg text-body-md text-text-primary font-bold">GTM &amp; GA4</span>
+<span class="font-label-sm text-label-sm text-text-dim">Conversion Tracking</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL HIGH-CONVERSION CONTACT & CALENDAR BOOKING SECTION -->
+<section class="w-full py-space-3xl bg-surface-deep relative" id="contact-booking">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Frame -->
+<div class="bg-surface-card rounded-2xl p-space-xl lg:p-space-2xl shadow-2xl relative overflow-hidden">
+<!-- Accent Glow Ring -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-accent-electric-lime/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-2xl">
+<!-- Left Column: Value Prop & Direct Telemetry -->
+<div class="lg:col-span-6 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-accent-electric-lime/15 text-accent-electric-lime font-badge-tech text-badge-tech uppercase tracking-wider mb-space-md">
+<span class="w-2 h-2 rounded-full bg-accent-electric-lime animate-ping"></span> Live Strategy Openings
               </div>
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">PureGrubs — Shopify Store</h3>
-              <p class="text-slate-300 text-sm mt-4 leading-relaxed">
-                We developed a high-converting Shopify store for PureGrubs, featuring clean, mobile-responsive design, strong emphasis on USA-made quality, detailed product nutrition highlights, educational blog content for backyard farmers, and optimized checkout with promotions and free shipping thresholds — delivering enhanced brand credibility and superior sales performance in the natural pet and poultry feed niche.
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary tracking-tight font-extrabold">
+                Ready to Scale Your Shopify Revenue? <span class="text-accent-electric-lime">Let's talk.</span>
+</h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-md leading-relaxed">
+                Book a 30-minute zero-fluff strategy session with Shan. We will inspect your live store, uncover immediate conversion leaks, and deliver a clear technical roadmap — whether you work with us or not.
               </p>
+<!-- Calendly Direct Push Card -->
+<div class="mt-space-lg p-space-md rounded-xl bg-surface-elevated flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[36px] text-accent-electric-lime">calendar_month</span>
+<div>
+<span class="font-title-lg text-title-lg text-text-primary block font-bold">Direct Calendly Calendar</span>
+<span class="font-body-sm text-body-sm text-text-muted">Instant confirmation • No back-and-forth</span>
+</div>
+</div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-space-md py-3 rounded-full bg-accent-electric-lime text-surface-deep font-headline-sm text-body-sm font-bold hover:bg-white transition-all shadow-[0_0_16px_rgba(210,248,49,0.3)]" href="https://calendly.com/shanakbar/meeting" rel="noopener noreferrer" target="_blank">
+<span>Pick a Time</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- Direct Contact Points -->
+<div class="mt-space-xl pt-space-md space-y-space-sm">
+<span class="font-badge-tech text-badge-tech uppercase tracking-wider text-text-muted block">Direct Engineering Contact</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs font-body-md text-body-md text-text-primary hover:text-accent-electric-lime transition-colors" href="https://wa.me/923211573075" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[20px]">chat</span>
+<span>WhatsApp: +92 321 1573075</span>
+</a>
+<a class="inline-flex items-center gap-space-xs font-body-md text-body-md text-text-primary hover:text-accent-electric-lime transition-colors" href="mailto:contact@enigmasystems.io">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<span>contact@enigmasystems.io</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Proposal Form -->
+<div class="lg:col-span-6 bg-surface-elevated p-space-lg lg:p-space-xl rounded-xl">
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">Say Hello / Request Custom Proposal</h3>
+<p class="font-body-sm text-body-sm text-text-muted mb-space-lg">Our engineering leads respond within 24 hours.</p>
+<form class="space-y-space-md" id="cro-contact-form"  action="https://formspree.io/f/mkjjaewd"
+  method="POST" >
+<!-- Service Selection Checkboxes -->
+<div class="space-y-space-xs">
+<label class="font-body-sm text-body-sm text-text-primary block font-medium">How can we help your store?</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-card cursor-pointer hover:bg-surface-base transition-colors">
+<input checked="" class="w-4 h-4 accent-accent-electric-lime rounded" name="services[]" type="checkbox" value="shopify"/>
+<span class="font-body-sm text-body-sm text-on-surface">Shopify / E-commerce</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-card cursor-pointer hover:bg-surface-base transition-colors">
+<input checked="" class="w-4 h-4 accent-accent-electric-lime rounded" name="services[]" type="checkbox" value="cro"/>
+<span class="font-body-sm text-body-sm text-on-surface">CRO Audit &amp; Testing</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-card cursor-pointer hover:bg-surface-base transition-colors">
+<input class="w-4 h-4 accent-accent-electric-lime rounded" name="services[]" type="checkbox" value="webdev"/>
+<span class="font-body-sm text-body-sm text-on-surface">Full-Stack / Node.js</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-card cursor-pointer hover:bg-surface-base transition-colors">
+<input class="w-4 h-4 accent-accent-electric-lime rounded" name="services[]" type="checkbox" value="uiux"/>
+<span class="font-body-sm text-body-sm text-on-surface">UI/UX Design</span>
+</label>
+</div>
+</div>
+<!-- Input Fields -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-text-muted mb-1">Your Name</label>
+<input name="name" class="w-full bg-surface-card text-text-primary font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:bg-surface-base transition-all" placeholder="e.g. Alexander Vance" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-text-muted mb-1">Work Email</label>
+<input name="email" class="w-full bg-surface-card text-text-primary font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:bg-surface-base transition-all" placeholder="alex@brandname.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-text-muted mb-1">Store URL or Current Tech Stack</label>
+<input name="store_url"class="w-full bg-surface-card text-text-primary font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:bg-surface-base transition-all" placeholder="https://yourstore.com" type="url"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-text-muted mb-1">Project Goals or Current Revenue Leak</label>
+<textarea name="message" class="w-full bg-surface-card text-text-primary font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:bg-surface-base transition-all" placeholder="Tell us about your conversion rate bottlenecks, speed issues, or specific Shopify customization requirements..." rows="3"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full inline-flex items-center justify-center gap-space-xs px-space-xl py-4 rounded-full bg-accent-electric-lime text-surface-deep font-headline-sm text-body-md font-bold hover:scale-[1.01] hover:bg-white transition-all shadow-[0_0_24px_rgba(210,248,49,0.35)]" type="submit">
+<span>Submit &amp; Request Audit Report</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CLIENT-SIDE SCRIPT FOR INTERACTIVE CRO ESTIMATOR -->
+<script>
+    (function initCroCalculator() {
+      const trafficInput = document.getElementById('traffic-slider');
+      const aovInput = document.getElementById('aov-slider');
+      const cvrInput = document.getElementById('cvr-slider');
 
-              <div class="grid grid-cols-3 gap-3 mt-6 p-4 rounded-xl bg-brand-surface border border-brand-border">
-                <div>
-                  <div class="font-mono text-xl font-bold text-white">+28%</div>
-                  <div class="font-mono text-[10px] text-slate-400 uppercase mt-0.5">CVR Uplift</div>
-                </div>
-                <div>
-                  <div class="font-mono text-xl font-bold text-brand-sky">1.1s</div>
-                  <div class="font-mono text-[10px] text-slate-400 uppercase mt-0.5">Mobile LCP</div>
-                </div>
-                <div>
-                  <div class="font-mono text-xl font-bold text-white">+44%</div>
-                  <div class="font-mono text-[10px] text-slate-400 uppercase mt-0.5">Cart Drawer CVR</div>
-                </div>
-              </div>
-            </div>
+      const trafficDisplay = document.getElementById('traffic-display');
+      const aovDisplay = document.getElementById('aov-display');
+      const cvrDisplay = document.getElementById('cvr-display');
+      const currentRevDisplay = document.getElementById('current-rev-display');
 
-            <div class="mt-8 flex items-center gap-4">
-              <a href="https://puregrubs.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-brand-blue hover:bg-blue-600 text-white font-semibold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-                <span>Inspect Live Store</span>
-                <span class="material-symbols-outlined text-sm">open_in_new</span>
-              </a>
-              <a href="https://calendly.com/shanakbar/meeting" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-slate-300 hover:text-brand-sky transition-colors flex items-center gap-1">
-                <span>Request Build Teardown</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-            </div>
-          </div>
+      const newCvrDisplay = document.getElementById('new-cvr-display');
+      const monthlyLiftDisplay = document.getElementById('monthly-lift-display');
+      const annualLiftDisplay = document.getElementById('annual-lift-display');
 
-          <div class="lg:col-span-6 p-6 sm:p-10 flex items-center justify-center bg-brand-surface/40 border-t lg:border-t-0 lg:border-l border-brand-border">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDVYxhgyeqnh3GhflkEg8RHQT9CHdxgDkg5_2wkteLdLXa5gYpi2Qkhv90JX35fMX1baS9GTqAMOr1XDchYliMo-YPGWbLKBXdjqvDb9reI0GXLtmBHgapWp_1NjknXHE7A_d4RGJnvBNa2Oj54AEc6zSus-_N-r0Hdub2x44DHG6rcIpKE8OguD8ZJLjhwiS_MvtLBgRjZFBuQ1qrXirMNa4Pnhzd41xXfP-KgUS7" alt="PureGrubs Shopify Store" class="w-full h-auto rounded-xl border border-brand-border shadow-2xl hover:scale-[1.01] transition-transform duration-300"/>
-          </div>
-        </div>
+      function formatCurrency(val) {
+        return '$' + Math.round(val).toLocaleString('en-US');
+      }
 
-        <!-- Case 2: T1A Auto -->
-        <div class="glass-panel rounded-2xl overflow-hidden border border-brand-border grid grid-cols-1 lg:grid-cols-12 items-center">
-          <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between order-2 lg:order-1">
-            <div>
-              <div class="flex items-center gap-2 mb-4">
-                <span class="px-2.5 py-1 rounded bg-brand-blue/20 text-brand-sky font-mono text-[10px] uppercase font-semibold">Live Shopify Store</span>
-                <span class="text-slate-500">•</span>
-                <span class="font-mono text-[10px] text-slate-400 uppercase">Automotive OEM Replacement</span>
-              </div>
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">T1A Auto — Shopify Store</h3>
-              <p class="text-slate-300 text-sm mt-4 leading-relaxed">
-                We developed a high-performance Shopify store for T1A Auto, a USA-based automotive parts brand specializing in OEM-quality replacement components. The store features a clean, conversion-focused design, advanced product organization by vehicle make and category, mobile-optimized shopping experience, trust-building warranty and support sections, and SEO-driven content structure to improve organic traffic. We also implemented enhanced product presentation, quick shop functionality, educational blog content, and streamlined customer journeys to boost engagement, credibility, and sales performance in the competitive auto parts market.
-              </p>
+      function updateCalculation() {
+        if (!trafficInput || !aovInput || !cvrInput) return;
 
-              <div class="grid grid-cols-3 gap-3 mt-6 p-4 rounded-xl bg-brand-surface border border-brand-border">
-                <div>
-                  <div class="font-mono text-xl font-bold text-white">+35%</div>
-                  <div class="font-mono text-[10px] text-slate-400 uppercase mt-0.5">Search to Cart</div>
-                </div>
-                <div>
-                  <div class="font-mono text-xl font-bold text-brand-sky">100%</div>
-                  <div class="font-mono text-[10px] text-slate-400 uppercase mt-0.5">Fitment Match</div>
-                </div>
-                <div>
-                  <div class="font-mono text-xl font-bold text-white">+52%</div>
-                  <div class="font-mono text-[10px] text-slate-400 uppercase mt-0.5">Mobile Checkout</div>
-                </div>
-              </div>
-            </div>
+        const traffic = parseFloat(trafficInput.value);
+        const aov = parseFloat(aovInput.value);
+        const cvr = parseFloat(cvrInput.value);
 
-            <div class="mt-8 flex items-center gap-4">
-              <a href="https://t1aauto.com/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-brand-blue hover:bg-blue-600 text-white font-semibold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-                <span>Inspect Live Store</span>
-                <span class="material-symbols-outlined text-sm">open_in_new</span>
-              </a>
-              <a href="https://calendly.com/shanakbar/meeting" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-slate-300 hover:text-brand-sky transition-colors flex items-center gap-1">
-                <span>Discuss Your Store Architecture</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-            </div>
-          </div>
+        // Display current values
+        trafficDisplay.textContent = traffic.toLocaleString('en-US');
+        aovDisplay.textContent = '$' + aov;
+        cvrDisplay.textContent = cvr.toFixed(1) + '%';
 
-          <div class="lg:col-span-6 p-6 sm:p-10 flex items-center justify-center bg-brand-surface/40 border-b lg:border-b-0 lg:border-l border-brand-border order-1 lg:order-2">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSOuNe4IL9Ac7CSxno6E2hiRlH1xl4s1sNIYr0m54tDprI7Eo07EjbFjEYsVjZ8pmrHZgSo3FEoTxylqEMQNm1XcJUSwS_G0hxJt9J8VqOKjFTUefcklZsoi2w2pvCWnkVbSjXbdRqxNINkXIHJW8hUTuYLdFLHxK-f8z4Q3MGtR6ZVJoHOn6RrqaCgqF0CJcV4506toQ8ZxbwBh0LS1ObMOk60SfC61tuZqIZGeM6" alt="T1A Auto Shopify Store" class="w-full h-auto rounded-xl border border-brand-border shadow-2xl hover:scale-[1.01] transition-transform duration-300"/>
-          </div>
-        </div>
+        // Math: Current baseline monthly rev
+        const baselineOrders = traffic * (cvr / 100);
+        const baselineRev = baselineOrders * aov;
+        currentRevDisplay.textContent = formatCurrency(baselineRev);
 
-      </div>
-    </section>
+        // Benchmark engineered lift: +25% relative CRO improvement
+        const relativeLiftPct = 0.25;
+        const newCvr = cvr * (1 + relativeLiftPct);
+        const newOrders = traffic * (newCvr / 100);
+        const newRev = newOrders * aov;
+        const monthlyLift = newRev - baselineRev;
+        const annualLift = monthlyLift * 12;
 
-    <!-- METHODOLOGY BLUEPRINT -->
-    <section id="process" class="py-24 border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="font-mono text-xs uppercase text-brand-sky tracking-widest block mb-2">[AGILE EXECUTION]</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            5-Stage Deployment Blueprint
-          </h2>
-          <p class="text-slate-400 text-sm mt-3">
-            A battle-tested deployment cycle engineered to protect live transactions while accelerating sprint delivery.
-          </p>
-        </div>
+        // Populate projected outputs
+        newCvrDisplay.textContent = newCvr.toFixed(2) + '%';
+        monthlyLiftDisplay.innerHTML = '+' + formatCurrency(monthlyLift) + '<span class="text-headline-sm text-text-muted font-normal"> /mo</span>';
+        annualLiftDisplay.innerHTML = '+' + formatCurrency(annualLift) + '<span class="text-body-md text-text-muted font-normal"> /year</span>';
+      }
 
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-          <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-xs text-brand-sky font-bold block mb-2">01 / AUDIT</span>
-              <h4 class="text-white font-semibold text-base">Funnel Telemetry</h4>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                Full GA4, heatmap, and session replay audit to map exact drop-off dropouts and checkout choke points.
-              </p>
-            </div>
-            <span class="font-mono text-[10px] text-slate-500 mt-6 uppercase">Day 1 - 3</span>
-          </div>
+      [trafficInput, aovInput, cvrInput].forEach(slider => {
+        if (slider) {
+          slider.addEventListener('input', updateCalculation);
+        }
+      });
 
-          <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-xs text-brand-sky font-bold block mb-2">02 / PLAN</span>
-              <h4 class="text-white font-semibold text-base">Hypothesis Prioritization</h4>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                Rank opportunities using the ICE framework (Impact, Confidence, Ease) to prioritize high-lift sprints first.
-              </p>
-            </div>
-            <span class="font-mono text-[10px] text-slate-500 mt-6 uppercase">Day 4 - 6</span>
-          </div>
-
-          <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-xs text-brand-sky font-bold block mb-2">03 / BUILD</span>
-              <h4 class="text-white font-semibold text-base">Liquid &amp; UI Architecture</h4>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                Bespoke design drafted in Figma and coded directly in lightweight native Shopify Liquid schemas.
-              </p>
-            </div>
-            <span class="font-mono text-[10px] text-slate-500 mt-6 uppercase">Sprint Week 2</span>
-          </div>
-
-          <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-xs text-brand-sky font-bold block mb-2">04 / TEST</span>
-              <h4 class="text-white font-semibold text-base">A/B Testing</h4>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                Deploy controlled split tests across live customer traffic until 95%+ statistical significance is confirmed.
-              </p>
-            </div>
-            <span class="font-mono text-[10px] text-slate-500 mt-6 uppercase">Sprint Week 3</span>
-          </div>
-
-          <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-xs text-brand-sky font-bold block mb-2">05 / SCALE</span>
-              <h4 class="text-white font-semibold text-base">Production Merge</h4>
-              <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                Winning variants are merged permanently into master branch with telemetry monitoring enabled.
-              </p>
-            </div>
-            <span class="font-mono text-[10px] text-slate-500 mt-6 uppercase">Continuous</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="py-24 border-b border-brand-border bg-brand-deep/30">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="font-mono text-xs uppercase text-brand-sky tracking-widest block mb-2">[VERIFIED CLIENT FEEDBACK]</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Client Reviews &amp; Endorsements
-          </h2>
-          <p class="text-slate-400 text-sm mt-3">
-            Real feedback from business founders and agency leaders who partner with Shan and Enigma Systems.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Review 1 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-brand-sky mb-4">
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-              </div>
-              <p class="text-slate-300 text-sm italic leading-relaxed">
-                "Shan was fantastic in building my Shopify website! My store is far more complex than a standard Shopify site, there was no way I could build it myself, so I needed a true expert. Shan took on the challenge effortlessly and created a seamless, user-friendly system that works perfectly. He was easy to communicate with, even setting up multiple Zoom meetings to ensure everything was just right. No task was too difficult, he tackled every request with skill and patience. Beyond the build, his ongoing support has been outstanding, always happy to fix, edit, and adjust anything I need. If you need a talented, reliable, and supportive Shopify expert, I cannot recommend Shan enough!"
-              </p>
-            </div>
-            <div class="mt-8 pt-4 border-t border-brand-border flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-blue/30 flex items-center justify-center font-mono text-xs text-brand-sky font-bold">
-                JG
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Jessica Gatt</div>
-                <div class="text-xs text-slate-400">Founder &amp; Owner, Your Perfect Planner</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 2 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-brand-sky mb-4">
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-              </div>
-              <p class="text-slate-300 text-sm italic leading-relaxed">
-                "Shan has worked for me previously making several changes to my Shopify stores. He was fast, communicated well, and an overall pleasure to work with. When I asked him to work on something that was outside of his current skillset, he told me that he would have to learn it and it would take additional time. His upfront honesty was very much appreciated, and I hired him for the job. He quickly learned what was necessary and worked diligently. He did some great work... and acquired some new skills. I look forward to the day we get to work together again."
-              </p>
-            </div>
-            <div class="mt-8 pt-4 border-t border-brand-border flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-blue/30 flex items-center justify-center font-mono text-xs text-brand-sky font-bold">
-                TR
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Troy Remelski</div>
-                <div class="text-xs text-slate-400">CEO, Conquest Media, LLC</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 3 -->
-          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-brand-sky mb-4">
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-              </div>
-              <p class="text-slate-300 text-sm italic leading-relaxed">
-                "Shan did an exceptional job working on our conversion tracking issues. If you need help with your Shopify store or conversion tracking, Shan will do a great job and provide incredible service. Shan took time on numerous calls to discuss the project and educate me on the challenges and solution he came up with. I highly recommend working with Shan."
-              </p>
-            </div>
-            <div class="mt-8 pt-4 border-t border-brand-border flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-blue/30 flex items-center justify-center font-mono text-xs text-brand-sky font-bold">
-                CO
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Chris O'Brien</div>
-                <div class="text-xs text-slate-400">Founder &amp; Owner, Digital Giants</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECH MATRIX -->
-    <section id="stack" class="py-24 border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="font-mono text-xs uppercase text-brand-sky tracking-widest block mb-2">[TECHNOLOGY MATRIX]</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Battle-Tested Stacks We Master
-          </h2>
-          <p class="text-slate-400 text-sm mt-3">
-            Modern technologies powering lightning-fast storefronts and resilient backend systems.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Shopify OS 2.0</span>
-            <span class="text-[10px] text-slate-400 font-mono">Native Themes</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Shopify Liquid</span>
-            <span class="text-[10px] text-slate-400 font-mono">Zero Bloat</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">React &amp; Next.js</span>
-            <span class="text-[10px] text-slate-400 font-mono">Headless UI</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Node.js &amp; Express</span>
-            <span class="text-[10px] text-slate-400 font-mono">Custom APIs</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">MongoDB &amp; SQL</span>
-            <span class="text-[10px] text-slate-400 font-mono">Data Persistence</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">OpenAI &amp; Python</span>
-            <span class="text-[10px] text-slate-400 font-mono">Smart Automation</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Tailwind CSS</span>
-            <span class="text-[10px] text-slate-400 font-mono">Precision Styling</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Figma &amp; UI/UX</span>
-            <span class="text-[10px] text-slate-400 font-mono">Conversion Flows</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Shopify Polaris</span>
-            <span class="text-[10px] text-slate-400 font-mono">App Interfaces</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">GraphQL &amp; REST</span>
-            <span class="text-[10px] text-slate-400 font-mono">Storefront APIs</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">Docker &amp; AWS</span>
-            <span class="text-[10px] text-slate-400 font-mono">Cloud Hosting</span>
-          </div>
-          <div class="glass-card p-4 rounded-xl text-center">
-            <span class="font-mono text-xs text-white font-semibold block">GA4 &amp; GTM</span>
-            <span class="text-[10px] text-slate-400 font-mono">Conversion Tracking</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INQUIRY & CONTACT SECTION -->
-    <section class="py-24 bg-gradient-to-b from-[#0A0E17] to-brand-deep">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="glass-panel p-8 sm:p-14 rounded-2xl border border-brand-border">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            <div class="lg:col-span-6 flex flex-col justify-between">
-              <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full accent-pill text-xs font-mono uppercase mb-4">
-                  [RESERVE SPRINT CAPACITY]
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                  Ready to Accelerate Your Shopify Revenue?
-                </h2>
-                <p class="text-slate-300 text-sm mt-4 leading-relaxed">
-                  Book a direct 30-minute technical roadmap call with Shan. We'll inspect your store's speed, Core Web Vitals, and checkout bottlenecks — zero sales fluff, just practical engineering guidance.
-                </p>
-                
-                <div class="mt-8 p-5 rounded-xl bg-brand-surface border border-brand-border space-y-3">
-                  <div class="flex items-center gap-3 text-sm text-slate-200">
-                    <span class="material-symbols-outlined text-brand-sky text-lg">calendar_month</span>
-                    <span>Direct Architecture Consultation with Shan</span>
-                  </div>
-                  <div class="flex items-center gap-3 text-sm text-slate-200">
-                    <span class="material-symbols-outlined text-brand-sky text-lg">speed</span>
-                    <span>Full Funnel &amp; Core Web Vitals Teardown</span>
-                  </div>
-                  <div class="flex items-center gap-3 text-sm text-slate-200">
-                    <span class="material-symbols-outlined text-brand-sky text-lg">verified</span>
-                    <span>Clear 2-Week Sprint Deployment Roadmap</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-brand-border space-y-2">
-                <div class="text-xs text-slate-400 flex items-center gap-2 font-mono">
-                  <span class="material-symbols-outlined text-sm text-brand-sky">phone_iphone</span>
-                  <a href="https://wa.me/+923211573075" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">+92 321 1573075 (WhatsApp)</a>
-                </div>
-                <div class="text-xs text-slate-400 flex items-center gap-2 font-mono">
-                  <span class="material-symbols-outlined text-sm text-brand-sky">mail</span>
-                  <a href="mailto:contact@enigmasystems.io" class="hover:text-white transition-colors">contact@enigmasystems.io</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Form -->
-            <div class="lg:col-span-6 bg-brand-surface/70 p-8 rounded-xl border border-brand-border">
-              <h3 class="text-xl font-bold text-white mb-2">Request an Engineering Proposal</h3>
-              <p class="text-xs text-slate-400 mb-6">Our senior team reviews each inquiry and replies within 24 hours.</p>
-
-              <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your technical request has been sent.');">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block text-xs font-mono text-slate-400 mb-1">Your Name</label>
-                    <input type="text" placeholder="e.g. Alexander Vance" required class="w-full px-3.5 py-2.5 rounded-lg bg-brand-deep border border-brand-border text-white text-sm focus:outline-none focus:border-brand-sky"/>
-                  </div>
-                  <div>
-                    <label class="block text-xs font-mono text-slate-400 mb-1">Work Email</label>
-                    <input type="email" placeholder="alex@brandname.com" required class="w-full px-3.5 py-2.5 rounded-lg bg-brand-deep border border-brand-border text-white text-sm focus:outline-none focus:border-brand-sky"/>
-                  </div>
-                </div>
-
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1">Shopify Store URL / Tech Stack</label>
-                  <input type="text" placeholder="https://yourstore.com" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-deep border border-brand-border text-white text-sm focus:outline-none focus:border-brand-sky"/>
-                </div>
-
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1">What can we help you solve?</label>
-                  <textarea rows="4" placeholder="Tell us about your conversion bottlenecks, speed requirements, or custom development needs..." class="w-full px-3.5 py-2.5 rounded-lg bg-brand-deep border border-brand-border text-white text-sm focus:outline-none focus:border-brand-sky"></textarea>
-                </div>
-
-                <div class="flex items-center gap-4 pt-2">
-                  <button type="submit" class="flex-1 py-3.5 rounded-lg bg-brand-blue hover:bg-blue-600 text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-                    Submit Proposal Request
-                  </button>
-                  <a href="https://calendly.com/shanakbar/meeting" target="_blank" rel="noopener noreferrer" class="px-4 py-3.5 rounded-lg glass-panel hover:bg-brand-deep text-slate-300 hover:text-white text-xs font-mono transition-colors text-center">
-                    Instant Call ↗
-                  </a>
-                </div>
-              </form>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="py-12 bg-[#070A10] border-t border-brand-border">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center">
-          <span class="material-symbols-outlined text-brand-sky text-lg">terminal</span>
-        </div>
-        <div class="text-xs text-slate-400">
-          <span class="text-white font-bold">ENIGMA SYSTEMS</span> — Engineering High-Converting Commerce.
-        </div>
-      </div>
-
-      <div class="flex items-center gap-6 text-xs text-slate-400 font-mono">
-        <a href="https://www.linkedin.com/company/enigma-systems-io/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-sky transition-colors">LinkedIn</a>
-        <a href="https://wa.me/+923211573075" target="_blank" rel="noopener noreferrer" class="hover:text-brand-sky transition-colors">WhatsApp</a>
-        <a href="https://www.facebook.com/share/1FiuACc5rw/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-sky transition-colors">Facebook</a>
-      </div>
-
-      <div class="text-[11px] font-mono text-slate-600">
-        © 2025 Enigma Systems. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPT FOR TELEMETRY SLIDER CALCULATOR -->
-  <script>
-    const sessionsInput = document.getElementById('sessions-input');
-    const aovInput = document.getElementById('aov-input');
-    const cvrInput = document.getElementById('cvr-input');
-
-    const sessionsVal = document.getElementById('sessions-val');
-    const aovVal = document.getElementById('aov-val');
-    const cvrVal = document.getElementById('cvr-val');
-    const baselineRev = document.getElementById('baseline-rev');
-    const monthlyGrowth = document.getElementById('monthly-growth');
-    const annualGrowth = document.getElementById('annual-growth');
-    const targetCvr = document.getElementById('target-cvr');
-
-    function updateTelemetry() {
-      const sessions = parseFloat(sessionsInput.value);
-      const aov = parseFloat(aovInput.value);
-      const cvr = parseFloat(cvrInput.value);
-
-      sessionsVal.textContent = Number(sessions).toLocaleString();
-      aovVal.textContent = '$' + Number(aov).toLocaleString();
-      cvrVal.textContent = cvr.toFixed(1) + '%';
-
-      const baseOrders = (sessions * (cvr / 100));
-      const baseMonthly = baseOrders * aov;
-      baselineRev.textContent = '$' + Math.round(baseMonthly).toLocaleString() + ' / mo';
-
-      const liftFactor = 0.25; // 25% average lift
-      const monthlyLift = baseMonthly * liftFactor;
-      const annualLift = monthlyLift * 12;
-      const newCvr = cvr * (1 + liftFactor);
-
-      monthlyGrowth.innerHTML = '+$' + Math.round(monthlyLift).toLocaleString() + ' <span class="text-lg font-normal text-slate-400">/mo</span>';
-      annualGrowth.textContent = '+$' + Math.round(annualLift).toLocaleString() + ' / yr';
-      targetCvr.textContent = newCvr.toFixed(2) + '%';
-    }
-
-    sessionsInput.addEventListener('input', updateTelemetry);
-    aovInput.addEventListener('input', updateTelemetry);
-    cvrInput.addEventListener('input', updateTelemetry);
-    updateTelemetry();
+      // Initial execution
+      updateCalculation();
+    })();
   </script>
-
-</body>
-</html>
+</div></main><footer class="w-full bg-surface-card shadow-[0_-1px_16px_rgba(0,0,0,0.5)] pt-space-3xl pb-space-2xl"><div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter lg:gap-space-xl pb-space-2xl"><div class="lg:col-span-5 flex flex-col items-start space-y-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full p-[1px] bg-gradient-to-tr from-accent-emerald to-accent-electric-lime"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrC_WDWj6EYbwRg9TeCi1GsaIKC-rD-9v_wLeVj2_EO0e9in2vNKMMOBlxm99yGppOccYAEWGxLYwqVIDJdxkXWj-rOlhHfGlGa7JPDtWM4Hkr8-_RinGSV7cBtphbRsdo4i_oyuxU68OOyx-Qg0pevxixjODvUkuYeuQxq0gtHbMMRUnHWRgtA5JdlKB_qmf7mC_35SVHuZmQJcyFPTnYHlJ7ffpPYL4NKUnJew96TI"/></div><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold">ENIGMA SYSTEMS</span></div><p class="font-body-md text-body-md text-text-muted max-w-md">Engineering the Digital Future - High-performance web solutions, custom Shopify architectures, and AI integrations.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-elevated"><span class="w-2 h-2 rounded-full bg-accent-emerald-bright animate-pulse"></span><span class="font-badge-tech text-badge-tech text-secondary">GLOBAL CRO &amp; SHOPIFY PLUS SPECIALISTS</span></div></div><div class="lg:col-span-3 flex flex-col space-y-space-sm"><span class="font-badge-tech text-badge-tech uppercase tracking-wider text-text-muted">Navigation</span><div class="flex flex-col space-y-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-accent-electric-lime transition-colors" data-path="services" href="#">Services</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-accent-electric-lime transition-colors" data-path="case-studies" href="#">Projects &amp; Builds</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-accent-electric-lime transition-colors" data-path="testimonials" href="#">Client Reviews</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-accent-electric-lime transition-colors" data-path="our-tech" href="#">Tech Stack &amp; Infrastructure</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-accent-electric-lime transition-colors" data-path="process" href="#">Methodology</a></div></div><div class="lg:col-span-4 flex flex-col space-y-space-md"><span class="font-badge-tech text-badge-tech uppercase tracking-wider text-text-muted">Direct Telemetry</span><div class="flex flex-col space-y-space-xs"><a class="font-body-md text-body-md text-text-primary hover:text-accent-electric-lime transition-colors flex items-center gap-space-xs" href="tel:+923211573075"><span class="material-symbols-outlined text-secondary text-[18px]">call</span>+92 321 1573075</a><a class="font-body-md text-body-md text-text-primary hover:text-accent-electric-lime transition-colors flex items-center gap-space-xs" href="mailto:contact@enigmasystems.io"><span class="material-symbols-outlined text-secondary text-[18px]">mail</span>contact@enigmasystems.io</a></div><span class="font-badge-tech text-badge-tech uppercase tracking-wider text-text-muted pt-space-xs">Social Channels</span><div class="flex items-center gap-space-sm"><a class="px-space-md py-space-xs rounded-lg bg-surface-elevated font-badge-tech text-badge-tech text-on-surface-variant hover:text-surface-deep hover:bg-accent-electric-lime transition-all" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="px-space-md py-space-xs rounded-lg bg-surface-elevated font-badge-tech text-badge-tech text-on-surface-variant hover:text-surface-deep hover:bg-accent-electric-lime transition-all" href="https://wa.me/923211573075" rel="noopener noreferrer" target="_blank">WhatsApp</a><a class="px-space-md py-space-xs rounded-lg bg-surface-elevated font-badge-tech text-badge-tech text-on-surface-variant hover:text-surface-deep hover:bg-accent-electric-lime transition-all" href="https://facebook.com" rel="noopener noreferrer" target="_blank">Facebook</a></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm"><span class="font-body-sm text-body-sm text-text-dim">© 2026 Enigma Systems. All conversion architectures reserved.</span><div class="flex items-center gap-space-md text-text-dim font-label-sm text-label-sm"><span class="hover:text-text-muted cursor-pointer transition-colors">PRIVACY PROTOCOL</span><span class="hover:text-text-muted cursor-pointer transition-colors">TERMS OF SERVICE</span></div></div></div></footer></body></html>
