@@ -1,102 +1,122 @@
 ---
-name: Obsidian Architectural Engineering
+name: Performance Commerce Architecture
 colors:
-  surface: '#0f131c'
-  surface-dim: '#0f131c'
-  surface-bright: '#353942'
-  surface-container-lowest: '#0a0e16'
-  surface-container-low: '#181c24'
-  surface-container: '#1c2028'
-  surface-container-high: '#262a33'
-  surface-container-highest: '#31353e'
-  on-surface: '#dfe2ee'
-  on-surface-variant: '#c3c6d7'
-  inverse-surface: '#dfe2ee'
-  inverse-on-surface: '#2c3039'
-  outline: '#8d90a0'
-  outline-variant: '#434655'
-  surface-tint: '#b4c5ff'
-  primary: '#b4c5ff'
-  on-primary: '#002a78'
-  primary-container: '#2563eb'
-  on-primary-container: '#eeefff'
-  inverse-primary: '#0053db'
-  secondary: '#a5e7ff'
-  on-secondary: '#003543'
-  secondary-container: '#00d2ff'
-  on-secondary-container: '#00566a'
-  tertiary: '#d0bcff'
-  on-tertiary: '#3c0091'
-  tertiary-container: '#7d4ce7'
-  on-tertiary-container: '#f6edff'
+  surface: '#0e1513'
+  surface-dim: '#0e1513'
+  surface-bright: '#333b38'
+  surface-container-lowest: '#09100e'
+  surface-container-low: '#161d1b'
+  surface-container: '#1a211f'
+  surface-container-high: '#242b29'
+  surface-container-highest: '#2f3634'
+  on-surface: '#dde4e0'
+  on-surface-variant: '#c5c9ad'
+  inverse-surface: '#dde4e0'
+  inverse-on-surface: '#2b322f'
+  outline: '#8f937a'
+  outline-variant: '#454934'
+  surface-tint: '#b1d400'
+  primary: '#ffffff'
+  on-primary: '#2a3400'
+  primary-container: '#ccf229'
+  on-primary-container: '#596c00'
+  inverse-primary: '#546500'
+  secondary: '#4edea3'
+  on-secondary: '#003824'
+  secondary-container: '#00a572'
+  on-secondary-container: '#00311f'
+  tertiary: '#ffffff'
+  on-tertiary: '#003825'
+  tertiary-container: '#85f8c4'
+  on-tertiary-container: '#00734f'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#dbe1ff'
-  primary-fixed-dim: '#b4c5ff'
-  on-primary-fixed: '#00174b'
-  on-primary-fixed-variant: '#003ea8'
-  secondary-fixed: '#b6ebff'
-  secondary-fixed-dim: '#47d6ff'
-  on-secondary-fixed: '#001f28'
-  on-secondary-fixed-variant: '#004e60'
-  tertiary-fixed: '#e9ddff'
-  tertiary-fixed-dim: '#d0bcff'
-  on-tertiary-fixed: '#23005c'
-  on-tertiary-fixed-variant: '#5516be'
-  background: '#0f131c'
-  on-background: '#dfe2ee'
-  surface-variant: '#31353e'
+  primary-fixed: '#ccf229'
+  primary-fixed-dim: '#b1d400'
+  on-primary-fixed: '#171e00'
+  on-primary-fixed-variant: '#3e4c00'
+  secondary-fixed: '#6ffbbe'
+  secondary-fixed-dim: '#4edea3'
+  on-secondary-fixed: '#002113'
+  on-secondary-fixed-variant: '#005236'
+  tertiary-fixed: '#85f8c4'
+  tertiary-fixed-dim: '#68dba9'
+  on-tertiary-fixed: '#002114'
+  on-tertiary-fixed-variant: '#005137'
+  background: '#0e1513'
+  on-background: '#dde4e0'
+  surface-variant: '#2f3634'
+  surface-deep: '#040807'
+  surface-base: '#080F0D'
+  surface-card: '#0F1A17'
+  surface-elevated: '#162521'
+  border-subtle: rgba(255, 255, 255, 0.08)
+  border-emerald-glow: rgba(16, 185, 129, 0.35)
+  border-lime-glow: rgba(210, 248, 49, 0.45)
+  text-primary: '#F7FDF9'
+  text-muted: '#8EA39B'
+  text-dim: '#4D635A'
+  accent-electric-lime: '#D2F831'
+  accent-emerald: '#10B981'
+  accent-emerald-bright: '#22C55E'
+  accent-magenta: '#F472B6'
 typography:
   display-xl:
-    fontFamily: Plus Jakarta Sans
+    fontFamily: Epilogue
     fontSize: 64px
-    fontWeight: '700'
+    fontWeight: '800'
     lineHeight: 72px
     letterSpacing: -0.03em
   display-xl-mobile:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 38px
-    fontWeight: '700'
-    lineHeight: 44px
+    fontFamily: Epilogue
+    fontSize: 40px
+    fontWeight: '800'
+    lineHeight: 48px
     letterSpacing: -0.025em
-  display-lg:
-    fontFamily: Plus Jakarta Sans
+  headline-lg:
+    fontFamily: Epilogue
     fontSize: 48px
-    fontWeight: '600'
+    fontWeight: '700'
     lineHeight: 56px
     letterSpacing: -0.025em
-  display-lg-mobile:
-    fontFamily: Plus Jakarta Sans
+  headline-lg-mobile:
+    fontFamily: Epilogue
     fontSize: 32px
-    fontWeight: '600'
-    lineHeight: 38px
+    fontWeight: '700'
+    lineHeight: 40px
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Plus Jakarta Sans
+  headline-md:
+    fontFamily: Epilogue
     fontSize: 32px
     fontWeight: '600'
     lineHeight: 40px
     letterSpacing: -0.02em
-  headline-md:
-    fontFamily: Plus Jakarta Sans
+  headline-md-mobile:
+    fontFamily: Epilogue
     fontSize: 24px
     fontWeight: '600'
     lineHeight: 32px
     letterSpacing: -0.015em
   headline-sm:
+    fontFamily: Epilogue
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 30px
+    letterSpacing: -0.01em
+  title-lg:
     fontFamily: Plus Jakarta Sans
-    fontSize: 20px
-    fontWeight: '500'
-    lineHeight: 28px
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 26px
     letterSpacing: -0.01em
   body-lg:
     fontFamily: Plus Jakarta Sans
     fontSize: 18px
     fontWeight: '400'
     lineHeight: 28px
-    letterSpacing: -0.005em
+    letterSpacing: 0em
   body-md:
     fontFamily: Plus Jakarta Sans
     fontSize: 15px
@@ -108,25 +128,31 @@ typography:
     fontSize: 13px
     fontWeight: '400'
     lineHeight: 20px
-    letterSpacing: 0.005em
-  label-code:
-    fontFamily: JetBrains Mono
+    letterSpacing: 0.01em
+  metric-huge:
+    fontFamily: Epilogue
+    fontSize: 56px
+    fontWeight: '800'
+    lineHeight: 60px
+    letterSpacing: -0.03em
+  badge-tech:
+    fontFamily: Space Mono
     fontSize: 12px
-    fontWeight: '500'
-    lineHeight: 18px
-    letterSpacing: 0.04em
-  label-caps:
-    fontFamily: JetBrains Mono
-    fontSize: 11px
-    fontWeight: '600'
+    fontWeight: '700'
     lineHeight: 16px
-    letterSpacing: 0.1em
+    letterSpacing: 0.06em
+  label-sm:
+    fontFamily: Space Mono
+    fontSize: 11px
+    fontWeight: '400'
+    lineHeight: 14px
+    letterSpacing: 0.08em
 rounded:
-  sm: 0.125rem
-  DEFAULT: 0.25rem
-  md: 0.375rem
-  lg: 0.5rem
-  xl: 0.75rem
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
   full: 9999px
 spacing:
   gutter: 1.5rem
@@ -138,88 +164,99 @@ spacing:
   space-md: 1rem
   space-lg: 1.5rem
   space-xl: 2.5rem
+  space-2xl: 4rem
+  space-3xl: 6rem
 ---
 
 ## Brand & Style
 
-The visual identity targets high-growth enterprise merchants, DTC founders, and modern technical leaders who demand uncompromising technical execution and conversion refinement on Shopify Plus. The UI evokes rigorous architectural mastery, bespoke precision, and understated computational luxury. It replaces loud, commoditized neon-green tech aesthetics with an immaculate, nocturnal editorial workspace.
+This design system embodies high-velocity conversion optimization and bespoke Shopify engineering. It merges the technical authority, scientific experimentation, and neon-tinged dark aesthetic of advanced CRO intelligence with the rigorous, structured conversion mechanics of top-tier commerce engineering agencies.
 
-The style fuses **Refined Minimalist Editorial** with **High-Precision Glassmorphic Depth**:
-- **Atmospheric Nocturne:** A deep obsidian and sapphire slate baseline that provides profound contrast without eye fatigue.
-- **Luminous Spectral Accents:** Pure electric cobalt paired with precise iced-teal and subtle crystalline violet sheens to denote intelligent engineering and conversion lift.
-- **Architectural Structure:** Fine hairline dividers, restrained surface elevations, and surgical monospaced technical telemetry that reflect enterprise-grade theme infrastructure.
+### Personality & Emotional Response
+The interface evokes absolute confidence, calculated precision, and tangible financial uplift. Clients feel they are looking into a financial terminal dedicated exclusively to unlocking direct-to-consumer revenue. The tone avoids decorative fluff; every element signals data-driven experimentation, algorithmic execution, and rapid return on ad spend.
+
+### Design Movement: Dark Technical High-Conversion
+Drawing from modern cyber-minimalism and high-contrast tactical SaaS interfaces:
+- **Atmospheric Abyss:** Dense forest obsidian (`#070d0b` to `#0d1714`) provides an immersive, low-glare canvas that amplifies foreground data.
+- **Electric Conversion Accents:** High-voltage lime and emerald greens (`#D2F831`, `#10B981`) command immediate gaze-direction toward key metrics and Calendly booking triggers.
+- **Data Terminal Aesthetics:** Clean monospaced code badges juxtaposed with razor-sharp geometric headings establish technological supremacy without sacrificing editorial sophistication.
+- **Proof-Forward Composition:** Visual hierarchy prioritizes verified conversion lifts, before-and-after revenue telemetry, and live interactive CRO calculation models over passive storytelling.
 
 ## Colors
 
-The palette establishes an authoritative, deep-space substrate calibrated for technical fidelity:
+The palette is engineered around an asymmetric dark-mode ecosystem where neutral backgrounds lean into cold, bio-luminescent deep forest carbon rather than generic sterile grays.
 
-- **Primary Canvas & Neutrals:**
-  - Base Obsidian: `#0B0F17` (Deepest viewport background).
-  - Slate Container: `#111827` (Card and structural panel backgrounds).
-  - Elevated Surface: `#1E293B` (Floating states, subtle hovers).
-  - Border Hairline: `rgba(255, 255, 255, 0.08)` to `rgba(255, 255, 255, 0.14)`.
-  - Neutral Text Primary: `#F8FAFC` (Pure legibility for metrics and headlines).
-  - Neutral Text Secondary: `#94A3B8` (Structural body copy and parameters).
-  - Neutral Text Muted: `#475569` (Metadata, technical legends).
+### Chromatic Strategy
+- **Primary (`#D2F831` / Electric Lime):** Reserved strictly for primary transactional intent: main Calendly call-to-action buttons, high-impact conversion metrics, and highlighted text nodes that pinpoint revenue growth.
+- **Secondary (`#10B981` / Emerald Surge):** Drives status indicators, live experimentation tags, verified client metric badges, and secondary action surfaces.
+- **Tertiary (`#059669` / Deep Emerald):** Used for background badge fills, subtle glow atmospheric gradients, and supportive interactive accents.
+- **Accent Magenta (`#F472B6`):** An intentional shock color used sparingly for "Before/After" deficit indicators, CRO "leak" callouts, and friction point tags in audit charts.
 
-- **Chromatic Accents:**
-  - **Electric Azure (`#2563EB`):** Primary interactive calls-to-action, key performance curves, and operational focal points.
-  - **Iced Cyan (`#00D2FF`):** Secondary precision indicators, speed telemetry, code annotations, and conversion growth deltas.
-  - **Spectral Violet (`#8B5CF6`):** Tertiary accents, ambient specular highlights, and architectural tier badges.
-  - **Champagne Warmth (`#F5E6D3`):** Reserved for ultra-luxury highlights, editorial pull-quotes, and enterprise trust seals.
+### Surface Hierarchy
+Surfaces step from an ultra-deep canvas (`#040807` at root) up through container surfaces (`#0F1A17`) to hover and elevated tiers (`#162521`). Boundaries are defined via micro-borders layered with soft directional ambient light rather than thick, opaque dividing lines.
 
 ## Typography
 
-The typographic hierarchy balances structural authority with technical precision:
-- **Headlines & Narrative (Plus Jakarta Sans):** Geometric yet sculpted curves bring editorial refinement to commerce metrics and case study titles. Tight negative tracking gives large titles a dense, bespoke poise.
-- **Technical Telemetry & Badges (JetBrains Mono):** Monospaced labels articulate performance milestones, conversion rates, and engineering frameworks, reinforcing an exacting dev-first ethos without feeling raw or crude.
-- **Editorial Legibility:** Body copy maintains ample line heights (1.5x - 1.6x) and high contrast against slate backdrops to ensure effortless reading across deep-dive technical audits.
+The typographic hierarchy bridges high-impact editorial punch with disciplined technical telemetry:
+- **Headlines (Epilogue):** Chosen for its sturdy, progressive geometric authority. Tight letter spacing (`-0.02em` to `-0.03em`) creates muscular, decisive hero declarations and case-study headlines.
+- **Body & Subtitles (Plus Jakarta Sans):** Highly legible across dark interfaces, offering rounded friendly clarity that cushions technical CRO descriptions and keeps case-study narratives effortless to digest.
+- **Telemetry & Labels (Space Mono):** Brings developer-first rigor to metric gains, test tags, Shopify Plus architecture labels, and status badges.
+- **Metric Numbers (`metric-huge`):** Formatted in Epilogue Bold/800 to give client uplift statistics (+34% CVR, +$1.8M ARR) overwhelming visual gravity.
 
 ## Layout & Spacing
 
-The layout is governed by a 12-column dynamic grid designed around clear editorial cadences and clean vertical rhythm:
+A 12-column responsive grid underpins all layouts, operating at an overall maximum content containment width of `1280px` for optimal data density and narrative clarity.
 
-- **Desktop (>= 1200px):** 12 columns, 1.5rem gutters, maximum content boundary constrained to `1360px` with expansive outer margins (`margin: 3rem`) to create intentional breathing room.
-- **Tablet (768px - 1199px):** 8 columns, 1.25rem gutters, `margin: 2rem`. Complex multi-column comparisons collapse into dual-panel architectures.
-- **Mobile (< 768px):** 4 columns, 1rem gutters, `margin-mobile: 1.25rem`. Structural panels stack sequentially with unified edge padding to avoid horizontal cramping.
-- **Vertical Rhythm:** Sections step down using multiples of the root baseline (40px, 80px, 120px) to clearly separate thematic narratives (CRO diagnostics, architecture blueprints, codebase optimization).
+### Adaptive Behavior
+- **Desktop (1024px+):** 12 columns with `1.5rem` (24px) gutters and `3rem` (48px) safe outer canvas margins. Multi-column metric dashboards and side-by-side case-study before/after cards align cleanly across 6-column and 4-column splits.
+- **Tablet (768px - 1023px):** 8 columns, gutters compress to `1.25rem` (20px), outer margins set to `2rem` (32px). Complex audit calculators drop from dual-pane split into stacked sections.
+- **Mobile (< 768px):** 4 columns with `1rem` (16px) gutters and `1.25rem` (20px) outer margins. Multi-metric proof strips transform into horizontal swipe rails with snap alignment.
+
+### Spatial Rhythm
+Strict vertical rhythm is kept using the `space-xl` (40px) to `space-3xl` (96px) scale between major narrative blocks. Components maintain tight internal padding (`space-md` to `space-lg`) to preserve the feeling of dense, professional instrumentation.
 
 ## Elevation & Depth
 
-Visual hierarchy uses architectural layering, specular perimeter light, and disciplined atmospheric glow rather than standard drop shadows:
+Elevation does not rely on traditional muddy black drop shadows. Depth is achieved via **tonal stacking, subtle emerald/lime back-radiance, and delicate edge illumination**.
 
-- **Tier 0 (Viewport Canvas):** `#0B0F17` — deep absorption background with subtle linear ambient gradient bleeds (`radial-gradient(ellipse at top, rgba(37,99,235,0.08), transparent 70%)`).
-- **Tier 1 (Structural Panels):** `#111827` overlaid with an ultra-thin border (`1px solid rgba(255, 255, 255, 0.07)`).
-- **Tier 2 (Interactive & Elevated Cards):** Glassmorphic surface (`background: rgba(17, 24, 39, 0.75)`, `backdrop-filter: blur(16px)`, `border: 1px solid rgba(255, 255, 255, 0.12)`).
-- **Light Accents & Edge Sheen:** High-priority cards feature an asymmetric top border gradient (`linear-gradient(90deg, rgba(37,99,235,0.4) 0%, rgba(0,210,255,0.2) 100%)`).
-- **Luminous Hover State:** Elevated components gain an ambient, hyper-diffused outer field: `box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(37, 99, 235, 0.25)`.
+### Layering Architecture
+1. **Canvas Tier (0dp):** Solid deep background `#040807` overlaid with a radial background gradient centered at top: `radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.15), transparent 70%)`.
+2. **Card Tier (1dp):** `#0F1A17` backed by a 1px border `rgba(255, 255, 255, 0.07)`. Creates crisp structural contrast against the root canvas.
+3. **Elevated / Interactive Tier (2dp):** Surface transitions to `#162521`. Border shifts to `border-emerald-glow` (`rgba(16, 185, 129, 0.35)`). A diffuse ambient drop shadow is applied: `0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 24px -4px rgba(16, 185, 129, 0.12)`.
+4. **Hero CTA / Primary Trigger:** Pill buttons and featured outcome cards cast an electric lime bloom: `0 0 28px -4px rgba(210, 248, 49, 0.35)`.
+
+### Backdrop Glass Details
+Sticky headers and floating conversion bars employ `backdrop-filter: blur(16px)` over an 85% opacity surface `#080F0De6`, finished with an ultra-thin bottom border of `rgba(255, 255, 255, 0.08)`.
 
 ## Shapes
 
-The design uses **Soft Geometry (Level 1)** to maintain sharp engineering discipline:
-- Inputs, primary controls, and code wrappers utilize `0.25rem` (4px) to `0.5rem` (8px) corners.
-- Structural cards and modal containers use `0.75rem` (12px) max radius, ensuring components feel technical, structured, and architectural rather than playful.
-- Status dots and isolated icon pins remain strictly circular (`rounded-full`) for geometric contrast against rectangular panels.
+The design system uses a calibrated roundedness level:
+- **Level 2 (Standard Component Radius: 0.5rem / 8px):** Applied to form fields, metric micro-cards, and utility buttons. Provides structured, modern technical composure.
+- **Large Cards & Modules (`rounded-lg` / 1rem / 16px):** Used for primary case studies, interactive CRO calculators, and testimonial grids. Softens technical boundaries.
+- **Containers & Shells (`rounded-xl` / 1.5rem / 24px):** Used for major feature pods and modal shells.
+- **Pill Exceptions (`9999px`):** Conversion trigger buttons, Calendly booking anchors, and technical tag badges (`badge-tech`) use full pill geometry to maximize affordance and visual contrast against structural grid lines.
 
 ## Components
 
 ### Buttons
-- **Primary Action:** Solid cobalt background (`#2563EB`) with crisp white label (`#FFFFFF`). Micro-border of `rgba(255, 255, 255, 0.2)` on top edge to emulate physical beveling. Hover triggers an electric azure glow (`box-shadow: 0 0 20px rgba(37, 99, 235, 0.45)`) and slight color shift to `#1D4ED8`.
-- **Secondary (Technical):** Transparent backdrop, `1px solid rgba(255, 255, 255, 0.14)`, text `#F8FAFC`. On hover: `background: rgba(255, 255, 255, 0.05)`, border color transitions to `rgba(0, 210, 255, 0.4)`.
-- **Tertiary / Inline Link:** `#00D2FF` accompanied by a micro directional arrow (`JetBrains Mono`), with subtle underline on hover.
+- **Primary CTA ("Book Strategy Call / Calendly"):** Solid electric lime (`#D2F831`) background with pitch-black (`#040807`) Epilogue Bold text, pill radius, padding `1rem 2rem`. On hover, scale 1.02 with an electric glow `0 0 24px rgba(210, 248, 49, 0.4)`. Includes a trailing high-energy arrow icon.
+- **Secondary CTA ("View Audit / Case Studies"):** Surface card (`#0F1A17`) background with 1px border `rgba(255, 255, 255, 0.15)` and white text. On hover, border shifts to emerald (`#10B981`) with soft emerald inner sheen.
+- **Text Action:** Monospaced Space Mono label with an inline animated underline in electric lime.
 
-### Chips & Technical Badges
-- No generic bright pills. Badges use a dark semi-transparent tint (`background: rgba(17, 24, 39, 0.8)`), subtle boundary (`1px solid rgba(255, 255, 255, 0.1)`), and monospaced typography (`label-caps`).
-- Include a 6px status gem (e.g., `#00D2FF` for CRO Uplift, `#8B5CF6` for Architecture Tier, `#2563EB` for Active Optimization).
+### Metric & Status Badges
+- **Proof Badges:** Pill-shaped pill capsules with deep emerald fill (`rgba(16, 185, 129, 0.12)`), 1px stroke (`rgba(16, 185, 129, 0.3)`), and high-contrast green text. Includes a pulsing 6px circular dot indicator.
+- **Audit Deficit Badges ("Revenue Leak"):** Pill capsule in `rgba(244, 114, 182, 0.12)` with magenta border and text to highlight checkout bottlenecks.
 
-### Input Fields
-- Dark recessed substrate (`#080C14`), recessed border (`1px solid rgba(255, 255, 255, 0.1)`), text `#F8FAFC`.
-- Focus ring: non-distracting 1px glow using `#2563EB` with an additional ambient focus halo (`0 0 0 3px rgba(37, 99, 235, 0.2)`).
+### Cards
+- **Case Study Card:** Dual-state container. Left side features a high-density before/after metric column; right side houses rich store UI imagery. Encased in `#0F1A17` with a fine border (`rgba(255, 255, 255, 0.08)`). On hover, subtle elevation with emerald edge highlighting.
+- **Process Step Card:** Numbered cards featuring a large Space Mono watermark index (`01`, `02`) in emerald at 15% opacity, leading into bold value propositions.
 
-### Cards & Audit Modules
-- Frosted dark obsidian panels with hairline borders. Header modules feature an integrated monospace breadcrumb (`JetBrains Mono`, muted text) indicating technical scope (e.g., `CORE_WEB_VITALS // HYDRATION_RATE`).
-- Metric callouts display large figures (`display-lg`) paired with iced-cyan trend vectors (`+18.4% LTV`).
+### Input Fields & CRO Calculators
+- **Form Inputs:** Surface deep (`#070d0b`), 1px neutral border, text `#F7FDF9`. On focus, border transitions to `#D2F831` with `0 0 0 1px #D2F831` ring and zero default browser outline.
+- **Range Sliders (Interactive Revenue Leak Calculator):** Track height 6px in `#162521` with filled track in gradient emerald-to-lime. The thumb is an electric lime pill featuring dual vertical grip lines, emitting a soft lime glow on drag.
 
-### Lists & Key Deliverables
-- Clean horizontal rows separated by hairline rules (`rgba(255, 255, 255, 0.06)`).
-- Bullet icons replaced with technical tick marks or numeric indices styled in muted monospace (`01`, `02`, `03`). Hover states highlight the active row with an elevated slate wash (`rgba(255, 255, 255, 0.02)`).
+### Checkboxes & Radios
+- Box-size 20px, rounded to 4px. Inactive state: 1px border `rgba(255, 255, 255, 0.2)`. Active state: Electric lime solid fill with pitch-black checkmark glyph.
+
+### Client Trust Strips
+- Partner logos (Shopify Plus, Klaviyo, Recharge, etc.) are rendered in monochrome neutral text (`#8EA39B`) at 60% opacity, transitioning to 100% pure white `#FFFFFF` on hover.
